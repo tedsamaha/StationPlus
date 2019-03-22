@@ -9,3 +9,5 @@ C:\Users\Ted\Documents\Visual Studio 2015\Projects\StationPlus\StationPlus\obj\D
 C:\Users\Ted\Documents\Visual Studio 2015\Projects\StationPlus\StationPlus\obj\Debug\StationPlus.exe
 C:\Users\Ted\Documents\Visual Studio 2015\Projects\StationPlus\StationPlus\obj\Debug\StationPlus.xml
 C:\Users\Ted\Documents\Visual Studio 2015\Projects\StationPlus\StationPlus\obj\Debug\StationPlus.pdb
+C:\Users\Ted\Documents\Visual Studio 2015\Projects\StationPlus\StationPlus\obj\Debug\StationPlus.MainForm.resources
+C:\Users\Ted\Documents\Visual Studio 2015\Projects\StationPlus\StationPlus\obj\Debug\StationPlus.AboutForm.resources

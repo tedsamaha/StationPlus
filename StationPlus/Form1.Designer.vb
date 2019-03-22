@@ -25,12 +25,12 @@ Partial Class Form1
         Dim USERPASSLabel As System.Windows.Forms.Label
         Dim USERNAMELabel As System.Windows.Forms.Label
         Me.FormSkin1 = New StationPlus.FormSkin()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.FlatClose1 = New StationPlus.FlatClose()
         Me.FlatStatusBar1 = New StationPlus.FlatStatusBar()
         Me.FlatButton1 = New StationPlus.FlatButton()
         Me.USERPASSTextBox = New System.Windows.Forms.TextBox()
         Me.USERNAMETextBox = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         USERPASSLabel = New System.Windows.Forms.Label()
         USERNAMELabel = New System.Windows.Forms.Label()
         Me.FormSkin1.SuspendLayout()
@@ -60,18 +60,6 @@ Partial Class Form1
         Me.FormSkin1.Size = New System.Drawing.Size(642, 413)
         Me.FormSkin1.TabIndex = 0
         Me.FormSkin1.Text = "StationPlus - Login"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.PictureBox1.Image = Global.StationPlus.My.Resources.Resources.STATION__login_image
-        Me.PictureBox1.Location = New System.Drawing.Point(48, 58)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(574, 157)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 13
-        Me.PictureBox1.TabStop = False
         '
         'FlatClose1
         '
@@ -153,6 +141,18 @@ Partial Class Form1
         Me.USERNAMETextBox.Name = "USERNAMETextBox"
         Me.USERNAMETextBox.Size = New System.Drawing.Size(377, 34)
         Me.USERNAMETextBox.TabIndex = 6
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PictureBox1.Image = Global.StationPlus.My.Resources.Resources.STATION__login_image
+        Me.PictureBox1.Location = New System.Drawing.Point(48, 58)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(574, 157)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 13
+        Me.PictureBox1.TabStop = False
         '
         'Form1
         '
