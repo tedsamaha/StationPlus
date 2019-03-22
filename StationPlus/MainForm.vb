@@ -17,4 +17,9 @@
         AboutForm.Show()
 
     End Sub
+
+    Private Sub FlatButton6_Click(sender As Object, e As EventArgs) Handles FlatButton6.Click
+        CustomSQLForm.Show()
+
+    End Sub
 End Class

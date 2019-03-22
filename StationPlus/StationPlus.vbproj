@@ -78,6 +78,12 @@
     <Compile Include="AboutForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CustomSQLForm.Designer.vb">
+      <DependentUpon>CustomSQLForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomSQLForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FlatUI.vb">
       <SubType>Component</SubType>
     </Compile>
@@ -113,6 +119,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AboutForm.resx">
       <DependentUpon>AboutForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomSQLForm.resx">
+      <DependentUpon>CustomSQLForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
