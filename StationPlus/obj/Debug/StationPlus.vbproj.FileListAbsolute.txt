@@ -1,1 +1,11 @@
 c:\users\ted\documents\visual studio 2015\Projects\StationPlus\StationPlus\bin\Debug\StationPlus.exe.config
+C:\Users\Ted\Documents\Visual Studio 2015\Projects\StationPlus\StationPlus\bin\Debug\StationPlus.exe
+C:\Users\Ted\Documents\Visual Studio 2015\Projects\StationPlus\StationPlus\bin\Debug\StationPlus.pdb
+C:\Users\Ted\Documents\Visual Studio 2015\Projects\StationPlus\StationPlus\bin\Debug\StationPlus.xml
+C:\Users\Ted\Documents\Visual Studio 2015\Projects\StationPlus\StationPlus\obj\Debug\StationPlus.vbprojResolveAssemblyReference.cache
+C:\Users\Ted\Documents\Visual Studio 2015\Projects\StationPlus\StationPlus\obj\Debug\StationPlus.Form1.resources
+C:\Users\Ted\Documents\Visual Studio 2015\Projects\StationPlus\StationPlus\obj\Debug\StationPlus.Resources.resources
+C:\Users\Ted\Documents\Visual Studio 2015\Projects\StationPlus\StationPlus\obj\Debug\StationPlus.vbproj.GenerateResource.Cache
+C:\Users\Ted\Documents\Visual Studio 2015\Projects\StationPlus\StationPlus\obj\Debug\StationPlus.exe
+C:\Users\Ted\Documents\Visual Studio 2015\Projects\StationPlus\StationPlus\obj\Debug\StationPlus.xml
+C:\Users\Ted\Documents\Visual Studio 2015\Projects\StationPlus\StationPlus\obj\Debug\StationPlus.pdb
