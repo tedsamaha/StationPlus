@@ -47,5 +47,15 @@ StationPlus
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:StationPlus.My.Resources.Resources.STATION__login_image">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:StationPlus.My.Resources.Resources.STATION__logo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 </members>
 </doc>
