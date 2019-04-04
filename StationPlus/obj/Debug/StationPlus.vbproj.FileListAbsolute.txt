@@ -13,3 +13,4 @@ C:\Users\Ted\Documents\Visual Studio 2015\Projects\StationPlus\StationPlus\obj\D
 C:\Users\Ted\Documents\Visual Studio 2015\Projects\StationPlus\StationPlus\obj\Debug\StationPlus.AboutForm.resources
 C:\Users\Ted\Documents\Visual Studio 2015\Projects\StationPlus\StationPlus\obj\Debug\StationPlus.CustomSQLForm.resources
 C:\Users\Ted\Documents\Visual Studio 2015\Projects\StationPlus\StationPlus\obj\Debug\StationPlus.administrator.resources
+C:\Users\Ted\documents\visual studio 2015\Projects\StationPlus\StationPlus\obj\Debug\StationPlus.ClientsForm.resources

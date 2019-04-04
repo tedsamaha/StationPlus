@@ -84,6 +84,12 @@
     <Compile Include="administrator.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ClientsForm.Designer.vb">
+      <DependentUpon>ClientsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CustomSQLForm.Designer.vb">
       <DependentUpon>CustomSQLForm.vb</DependentUpon>
     </Compile>
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="administrator.resx">
       <DependentUpon>administrator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientsForm.resx">
+      <DependentUpon>ClientsForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomSQLForm.resx">
       <DependentUpon>CustomSQLForm.vb</DependentUpon>

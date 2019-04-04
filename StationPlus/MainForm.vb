@@ -126,4 +126,10 @@ Public Class MainForm
         CustomSQLForm.Show()
 
     End Sub
+
+    Private Sub FlatButton3_Click(sender As Object, e As EventArgs) Handles FlatButton3.Click
+        ClientsForm.Show()
+        Me.Hide()
+
+    End Sub
 End Class
