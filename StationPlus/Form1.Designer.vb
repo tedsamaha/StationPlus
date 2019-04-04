@@ -25,17 +25,41 @@ Partial Class Form1
         Dim USERPASSLabel As System.Windows.Forms.Label
         Dim USERNAMELabel As System.Windows.Forms.Label
         Me.FormSkin1 = New StationPlus.FormSkin()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.FlatClose1 = New StationPlus.FlatClose()
         Me.FlatStatusBar1 = New StationPlus.FlatStatusBar()
         Me.FlatButton1 = New StationPlus.FlatButton()
         Me.USERPASSTextBox = New System.Windows.Forms.TextBox()
         Me.USERNAMETextBox = New System.Windows.Forms.TextBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         USERPASSLabel = New System.Windows.Forms.Label()
         USERNAMELabel = New System.Windows.Forms.Label()
         Me.FormSkin1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'USERPASSLabel
+        '
+        USERPASSLabel.AutoSize = True
+        USERPASSLabel.BackColor = System.Drawing.Color.Transparent
+        USERPASSLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        USERPASSLabel.ForeColor = System.Drawing.Color.White
+        USERPASSLabel.Location = New System.Drawing.Point(63, 274)
+        USERPASSLabel.Name = "USERPASSLabel"
+        USERPASSLabel.Size = New System.Drawing.Size(127, 28)
+        USERPASSLabel.TabIndex = 7
+        USERPASSLabel.Text = "PASSWORD:"
+        '
+        'USERNAMELabel
+        '
+        USERNAMELabel.AutoSize = True
+        USERNAMELabel.BackColor = System.Drawing.Color.Transparent
+        USERNAMELabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        USERNAMELabel.ForeColor = System.Drawing.Color.White
+        USERNAMELabel.Location = New System.Drawing.Point(63, 225)
+        USERNAMELabel.Name = "USERNAMELabel"
+        USERNAMELabel.Size = New System.Drawing.Size(126, 28)
+        USERNAMELabel.TabIndex = 5
+        USERNAMELabel.Text = "USERNAME:"
         '
         'FormSkin1
         '
@@ -60,6 +84,18 @@ Partial Class Form1
         Me.FormSkin1.Size = New System.Drawing.Size(642, 413)
         Me.FormSkin1.TabIndex = 0
         Me.FormSkin1.Text = "StationPlus - Login"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PictureBox1.Image = Global.StationPlus.My.Resources.Resources.STATION__login_image
+        Me.PictureBox1.Location = New System.Drawing.Point(48, 58)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(574, 157)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 13
+        Me.PictureBox1.TabStop = False
         '
         'FlatClose1
         '
@@ -103,18 +139,6 @@ Partial Class Form1
         Me.FlatButton1.Text = "LOG IN"
         Me.FlatButton1.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
         '
-        'USERPASSLabel
-        '
-        USERPASSLabel.AutoSize = True
-        USERPASSLabel.BackColor = System.Drawing.Color.Transparent
-        USERPASSLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        USERPASSLabel.ForeColor = System.Drawing.Color.White
-        USERPASSLabel.Location = New System.Drawing.Point(63, 274)
-        USERPASSLabel.Name = "USERPASSLabel"
-        USERPASSLabel.Size = New System.Drawing.Size(127, 28)
-        USERPASSLabel.TabIndex = 7
-        USERPASSLabel.Text = "PASSWORD:"
-        '
         'USERPASSTextBox
         '
         Me.USERPASSTextBox.Location = New System.Drawing.Point(202, 273)
@@ -123,36 +147,12 @@ Partial Class Form1
         Me.USERPASSTextBox.TabIndex = 8
         Me.USERPASSTextBox.UseSystemPasswordChar = True
         '
-        'USERNAMELabel
-        '
-        USERNAMELabel.AutoSize = True
-        USERNAMELabel.BackColor = System.Drawing.Color.Transparent
-        USERNAMELabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        USERNAMELabel.ForeColor = System.Drawing.Color.White
-        USERNAMELabel.Location = New System.Drawing.Point(63, 225)
-        USERNAMELabel.Name = "USERNAMELabel"
-        USERNAMELabel.Size = New System.Drawing.Size(126, 28)
-        USERNAMELabel.TabIndex = 5
-        USERNAMELabel.Text = "USERNAME:"
-        '
         'USERNAMETextBox
         '
         Me.USERNAMETextBox.Location = New System.Drawing.Point(202, 224)
         Me.USERNAMETextBox.Name = "USERNAMETextBox"
         Me.USERNAMETextBox.Size = New System.Drawing.Size(377, 34)
         Me.USERNAMETextBox.TabIndex = 6
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.PictureBox1.Image = Global.StationPlus.My.Resources.Resources.STATION__login_image
-        Me.PictureBox1.Location = New System.Drawing.Point(48, 58)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(574, 157)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 13
-        Me.PictureBox1.TabStop = False
         '
         'Form1
         '
