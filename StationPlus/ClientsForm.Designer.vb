@@ -151,7 +151,7 @@ Partial Class ClientsForm
         Me.FormSkin1.Name = "FormSkin1"
         Me.FormSkin1.Size = New System.Drawing.Size(1100, 718)
         Me.FormSkin1.TabIndex = 0
-        Me.FormSkin1.Text = "Bois De Vie - Clients"
+        Me.FormSkin1.Text = "StationPlus - Clients"
         '
         'CLIENT_IDLabel
         '
@@ -646,7 +646,7 @@ Partial Class ClientsForm
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ClientsForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Bois De Vie - Clients"
+        Me.Text = "Station Plus - Clients"
         Me.TransparencyKey = System.Drawing.Color.Fuchsia
         CType(Me.StationPlusDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CLIENTSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

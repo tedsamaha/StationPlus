@@ -190,7 +190,7 @@ Partial Class CustomSQLForm
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "CustomSQLForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Bois De Vie - Custom SQL Code"
+        Me.Text = "StationPlus - Custom SQL Code"
         Me.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.FormSkin1.ResumeLayout(False)
         Me.FormSkin1.PerformLayout()
