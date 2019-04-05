@@ -24,12 +24,16 @@ Partial Class administrator
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.FormSkin1 = New StationPlus.FormSkin()
+        Me.SPLUS_USERSDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SPLUS_USERSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.StationPlusDataSet = New StationPlus.StationPlusDataSet()
         Me.FlatButton3 = New StationPlus.FlatButton()
         Me.FlatButton2 = New StationPlus.FlatButton()
         Me.FlatLabel2 = New StationPlus.FlatLabel()
         Me.FlatLabel1 = New StationPlus.FlatLabel()
-        Me.SPLUS_USERSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.StationPlusDataSet = New StationPlus.StationPlusDataSet()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.FlatButton1 = New StationPlus.FlatButton()
         Me.FlatLabel4 = New StationPlus.FlatLabel()
@@ -40,16 +44,12 @@ Partial Class administrator
         Me.BDV_USERSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SPLUS_USERSTableAdapter = New StationPlus.StationPlusDataSetTableAdapters.SPLUS_USERSTableAdapter()
         Me.TableAdapterManager = New StationPlus.StationPlusDataSetTableAdapters.TableAdapterManager()
-        Me.SPLUS_USERSDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FormSkin1.SuspendLayout()
+        CType(Me.SPLUS_USERSDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SPLUS_USERSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StationPlusDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.BDV_USERSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SPLUS_USERSDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'FormSkin1
@@ -73,6 +73,46 @@ Partial Class administrator
         Me.FormSkin1.Size = New System.Drawing.Size(460, 531)
         Me.FormSkin1.TabIndex = 0
         Me.FormSkin1.Text = "StationPlus - Admin Control Pannel"
+        '
+        'SPLUS_USERSDataGridView
+        '
+        Me.SPLUS_USERSDataGridView.AutoGenerateColumns = False
+        Me.SPLUS_USERSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.SPLUS_USERSDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
+        Me.SPLUS_USERSDataGridView.DataSource = Me.SPLUS_USERSBindingSource
+        Me.SPLUS_USERSDataGridView.Location = New System.Drawing.Point(16, 264)
+        Me.SPLUS_USERSDataGridView.Name = "SPLUS_USERSDataGridView"
+        Me.SPLUS_USERSDataGridView.RowTemplate.Height = 24
+        Me.SPLUS_USERSDataGridView.Size = New System.Drawing.Size(427, 220)
+        Me.SPLUS_USERSDataGridView.TabIndex = 24
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "USERNAME"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "USERNAME"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "USERPASS"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "USERPASS"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "ISADMIN"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "ISADMIN"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'SPLUS_USERSBindingSource
+        '
+        Me.SPLUS_USERSBindingSource.DataMember = "SPLUS_USERS"
+        Me.SPLUS_USERSBindingSource.DataSource = Me.StationPlusDataSet
+        '
+        'StationPlusDataSet
+        '
+        Me.StationPlusDataSet.DataSetName = "StationPlusDataSet"
+        Me.StationPlusDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'FlatButton3
         '
@@ -125,16 +165,6 @@ Partial Class administrator
         Me.FlatLabel1.Size = New System.Drawing.Size(332, 19)
         Me.FlatLabel1.TabIndex = 13
         Me.FlatLabel1.Text = "*TIP: You can delete entries by pressing the 'DEL' key"
-        '
-        'SPLUS_USERSBindingSource
-        '
-        Me.SPLUS_USERSBindingSource.DataMember = "SPLUS_USERS"
-        Me.SPLUS_USERSBindingSource.DataSource = Me.StationPlusDataSet
-        '
-        'StationPlusDataSet
-        '
-        Me.StationPlusDataSet.DataSetName = "StationPlusDataSet"
-        Me.StationPlusDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'GroupBox1
         '
@@ -235,36 +265,6 @@ Partial Class administrator
         Me.TableAdapterManager.SPLUS_USERSTableAdapter = Me.SPLUS_USERSTableAdapter
         Me.TableAdapterManager.UpdateOrder = StationPlus.StationPlusDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'SPLUS_USERSDataGridView
-        '
-        Me.SPLUS_USERSDataGridView.AutoGenerateColumns = False
-        Me.SPLUS_USERSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.SPLUS_USERSDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
-        Me.SPLUS_USERSDataGridView.DataSource = Me.SPLUS_USERSBindingSource
-        Me.SPLUS_USERSDataGridView.Location = New System.Drawing.Point(16, 264)
-        Me.SPLUS_USERSDataGridView.Name = "SPLUS_USERSDataGridView"
-        Me.SPLUS_USERSDataGridView.RowTemplate.Height = 24
-        Me.SPLUS_USERSDataGridView.Size = New System.Drawing.Size(427, 220)
-        Me.SPLUS_USERSDataGridView.TabIndex = 24
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "USERNAME"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "USERNAME"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "USERPASS"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "USERPASS"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "ISADMIN"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "ISADMIN"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
         'administrator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -274,16 +274,16 @@ Partial Class administrator
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "administrator"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "administrator"
+        Me.Text = "StationPlus - Administartor"
         Me.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.FormSkin1.ResumeLayout(False)
         Me.FormSkin1.PerformLayout()
+        CType(Me.SPLUS_USERSDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SPLUS_USERSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StationPlusDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.BDV_USERSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SPLUS_USERSDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

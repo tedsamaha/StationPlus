@@ -132,4 +132,10 @@ Public Class MainForm
         Me.Hide()
 
     End Sub
+
+    Private Sub FlatButton4_Click(sender As Object, e As EventArgs) Handles FlatButton4.Click
+        InventoryForm.Show()
+        Me.Hide()
+
+    End Sub
 End Class
