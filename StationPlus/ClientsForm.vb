@@ -61,14 +61,14 @@ Public Class ClientsForm
         FlatStatusBar2.Text = "You are currently Logged in as:  " + Form1.USERNAMETextBox.Text.ToUpper + "                           Current Date is: " + System.DateTime.Today
 
 
-        CLIENT_FNTextBox.ReadOnly = True
-        CLIENT_IDTextBox.ReadOnly = True
-        CLIENT_LNTextBox.ReadOnly = True
-        MOBILETextBox.ReadOnly = True
-        C_ADDRESSTextBox.ReadOnly = True
-        CORP_MOBILETextBox.ReadOnly = True
-        WEBSITETextBox.ReadOnly = True
-        EMAILTextBox.ReadOnly = True
+        CLIENT_FNTextBox1.ReadOnly = True
+
+        CLIENT_LNTextBox1.ReadOnly = True
+        MOBILETextBox1.ReadOnly = True
+        C_ADDRESSTextBox1.ReadOnly = True
+        CORP_MOBILETextBox1.ReadOnly = True
+        WEBSITETextBox1.ReadOnly = True
+        EMAILTextBox1.ReadOnly = True
 
 
     End Sub
@@ -138,14 +138,14 @@ Public Class ClientsForm
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-        CLIENT_FNTextBox.ReadOnly = True
-        CLIENT_IDTextBox.ReadOnly = True
-        CLIENT_LNTextBox.ReadOnly = True
-        MOBILETextBox.ReadOnly = True
-        C_ADDRESSTextBox.ReadOnly = True
-        CORP_MOBILETextBox.ReadOnly = True
-        EMAILTextBox.ReadOnly = True
-        WEBSITETextBox.ReadOnly = True
+        CLIENT_FNTextBox1.ReadOnly = True
+
+        CLIENT_LNTextBox1.ReadOnly = True
+        MOBILETextBox1.ReadOnly = True
+        C_ADDRESSTextBox1.ReadOnly = True
+        CORP_MOBILETextBox1.ReadOnly = True
+        EMAILTextBox1.ReadOnly = True
+        WEBSITETextBox1.ReadOnly = True
 
         MsgBox("Changes have been Saved", MsgBoxStyle.Information)
 
@@ -183,26 +183,26 @@ Public Class ClientsForm
     End Sub
 
     Private Sub FlatButton4_Click(sender As Object, e As EventArgs) Handles FlatButton4.Click
-        CLIENT_FNTextBox.ReadOnly = False
-        CLIENT_IDTextBox.ReadOnly = False
-        CLIENT_LNTextBox.ReadOnly = False
-        MOBILETextBox.ReadOnly = False
-        C_ADDRESSTextBox.ReadOnly = False
-        CORP_MOBILETextBox.ReadOnly = False
-        EMAILTextBox.ReadOnly = False
-        WEBSITETextBox.ReadOnly = False
+        CLIENT_FNTextBox1.ReadOnly = False
+
+        CLIENT_LNTextBox1.ReadOnly = False
+        MOBILETextBox1.ReadOnly = False
+        C_ADDRESSTextBox1.ReadOnly = False
+        CORP_MOBILETextBox1.ReadOnly = False
+        EMAILTextBox1.ReadOnly = False
+        WEBSITETextBox1.ReadOnly = False
 
     End Sub
 
     Private Sub FlatButton5_Click(sender As Object, e As EventArgs) Handles FlatButton5.Click
-        CLIENT_FNTextBox.ReadOnly = False
-        CLIENT_IDTextBox.ReadOnly = False
-        CLIENT_LNTextBox.ReadOnly = False
-        MOBILETextBox.ReadOnly = False
-        C_ADDRESSTextBox.ReadOnly = False
-        CORP_MOBILETextBox.ReadOnly = False
-        EMAILTextBox.ReadOnly = False
-        WEBSITETextBox.ReadOnly = False
+        CLIENT_FNTextBox1.ReadOnly = False
+
+        CLIENT_LNTextBox1.ReadOnly = False
+        MOBILETextBox1.ReadOnly = False
+        C_ADDRESSTextBox1.ReadOnly = False
+        CORP_MOBILETextBox1.ReadOnly = False
+        EMAILTextBox1.ReadOnly = False
+        WEBSITETextBox1.ReadOnly = False
 
         Try
             Me.CLIENTSBindingSource.AddNew()

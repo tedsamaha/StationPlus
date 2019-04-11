@@ -65,7 +65,7 @@ Public Class InventoryForm
 
         FlatStatusBar1.Text = "You are currently Logged in as:  " + Form1.USERNAMETextBox.Text.ToUpper + "                           Current Date is: " + System.DateTime.Today
 
-        ITEM_IDTextBox.ReadOnly = True
+
         ITEM_NAMETextBox.ReadOnly = True
         UNITTextBox.ReadOnly = True
         UNIT_PRICETextBox.ReadOnly = True
@@ -94,7 +94,7 @@ Public Class InventoryForm
     End Sub
 
     Private Sub FlatButton4_Click(sender As Object, e As EventArgs) Handles FlatButton4.Click
-        ITEM_IDTextBox.ReadOnly = False
+
         ITEM_NAMETextBox.ReadOnly = False
         UNITTextBox.ReadOnly = False
         UNIT_PRICETextBox.ReadOnly = False
@@ -103,7 +103,7 @@ Public Class InventoryForm
     End Sub
 
     Private Sub FlatButton5_Click(sender As Object, e As EventArgs) Handles FlatButton5.Click
-        ITEM_IDTextBox.ReadOnly = False
+
         ITEM_NAMETextBox.ReadOnly = False
         UNITTextBox.ReadOnly = False
         UNIT_PRICETextBox.ReadOnly = False
@@ -125,7 +125,7 @@ Public Class InventoryForm
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-        ITEM_IDTextBox.ReadOnly = True
+
         ITEM_NAMETextBox.ReadOnly = True
         UNITTextBox.ReadOnly = True
         UNIT_PRICETextBox.ReadOnly = True
@@ -183,22 +183,22 @@ Public Class InventoryForm
         End Try
     End Sub
 
-    Private Sub FlatButton12_Click(sender As Object, e As EventArgs) Handles FlatButton12.Click
+    Private Sub FlatButton12_Click(sender As Object, e As EventArgs)
         INVENTORYDataGridView.Sort(INVENTORYDataGridView.Columns(1), System.ComponentModel.ListSortDirection.Ascending)
 
 
     End Sub
 
     Private Sub FlatButton13_Click(sender As Object, e As EventArgs) Handles FlatButton13.Click
-        INVENTORYDataGridView.Sort(INVENTORYDataGridView.Columns(2), System.ComponentModel.ListSortDirection.Ascending)
+        INVENTORYDataGridView.Sort(INVENTORYDataGridView.Columns(1), System.ComponentModel.ListSortDirection.Ascending)
     End Sub
 
     Private Sub FlatButton14_Click(sender As Object, e As EventArgs) Handles FlatButton14.Click
-        INVENTORYDataGridView.Sort(INVENTORYDataGridView.Columns(4), System.ComponentModel.ListSortDirection.Ascending)
+        INVENTORYDataGridView.Sort(INVENTORYDataGridView.Columns(3), System.ComponentModel.ListSortDirection.Ascending)
     End Sub
 
     Private Sub FlatButton15_Click(sender As Object, e As EventArgs) Handles FlatButton15.Click
-        INVENTORYDataGridView.Sort(INVENTORYDataGridView.Columns(5), System.ComponentModel.ListSortDirection.Ascending)
+        INVENTORYDataGridView.Sort(INVENTORYDataGridView.Columns(4), System.ComponentModel.ListSortDirection.Ascending)
     End Sub
 
     Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs)

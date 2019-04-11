@@ -30,6 +30,14 @@ Partial Class InventoryForm
         Dim INITIAL_STOCKLabel As System.Windows.Forms.Label
         Dim CURRENT_STOCKLabel As System.Windows.Forms.Label
         Me.FormSkin1 = New StationPlus.FormSkin()
+        Me.ITEM_IDLabel2 = New System.Windows.Forms.Label()
+        Me.INVENTORYBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.StationPlusDataSet = New StationPlus.StationPlusDataSet()
+        Me.ITEM_NAMETextBox = New System.Windows.Forms.TextBox()
+        Me.UNITTextBox = New System.Windows.Forms.TextBox()
+        Me.UNIT_PRICETextBox = New System.Windows.Forms.TextBox()
+        Me.INITIAL_STOCKTextBox = New System.Windows.Forms.TextBox()
+        Me.CURRENT_STOCKTextBox = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.INVENTORYDataGridView1 = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -38,8 +46,6 @@ Partial Class InventoryForm
         Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.INVENTORYBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.StationPlusDataSet = New StationPlus.StationPlusDataSet()
         Me.FlatButton2 = New StationPlus.FlatButton()
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
@@ -49,27 +55,20 @@ Partial Class InventoryForm
         Me.Label3 = New System.Windows.Forms.Label()
         Me.FlatStatusBar1 = New StationPlus.FlatStatusBar()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.FlatButton16 = New StationPlus.FlatButton()
         Me.FlatButton15 = New StationPlus.FlatButton()
         Me.FlatButton14 = New StationPlus.FlatButton()
         Me.FlatButton13 = New StationPlus.FlatButton()
-        Me.FlatButton12 = New StationPlus.FlatButton()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.INVENTORYDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ITEM_IDTextBox = New System.Windows.Forms.TextBox()
-        Me.ITEM_NAMETextBox = New System.Windows.Forms.TextBox()
-        Me.UNITTextBox = New System.Windows.Forms.TextBox()
-        Me.UNIT_PRICETextBox = New System.Windows.Forms.TextBox()
-        Me.INITIAL_STOCKTextBox = New System.Windows.Forms.TextBox()
-        Me.CURRENT_STOCKTextBox = New System.Windows.Forms.TextBox()
+        Me.ITEMNAMEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UNITDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UNITPRICEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.INITIALSTOCKDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CURRENTSTOCKDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.FlatButton11 = New StationPlus.FlatButton()
         Me.FlatButton10 = New StationPlus.FlatButton()
@@ -83,7 +82,6 @@ Partial Class InventoryForm
         Me.FlatButton1 = New StationPlus.FlatButton()
         Me.INVENTORYTableAdapter = New StationPlus.StationPlusDataSetTableAdapters.INVENTORYTableAdapter()
         Me.TableAdapterManager = New StationPlus.StationPlusDataSetTableAdapters.TableAdapterManager()
-        Me.FlatButton16 = New StationPlus.FlatButton()
         ITEM_IDLabel = New System.Windows.Forms.Label()
         ITEM_NAMELabel = New System.Windows.Forms.Label()
         UNITLabel = New System.Windows.Forms.Label()
@@ -91,10 +89,10 @@ Partial Class InventoryForm
         INITIAL_STOCKLabel = New System.Windows.Forms.Label()
         CURRENT_STOCKLabel = New System.Windows.Forms.Label()
         Me.FormSkin1.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        CType(Me.INVENTORYDataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.INVENTORYBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StationPlusDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel4.SuspendLayout()
+        CType(Me.INVENTORYDataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.INVENTORYDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -178,23 +176,23 @@ Partial Class InventoryForm
         Me.FormSkin1.BackColor = System.Drawing.Color.White
         Me.FormSkin1.BaseColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(73, Byte), Integer))
         Me.FormSkin1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(53, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.FormSkin1.Controls.Add(Me.ITEM_IDLabel2)
+        Me.FormSkin1.Controls.Add(Me.ITEM_NAMETextBox)
+        Me.FormSkin1.Controls.Add(Me.UNITTextBox)
+        Me.FormSkin1.Controls.Add(Me.UNIT_PRICETextBox)
+        Me.FormSkin1.Controls.Add(Me.INITIAL_STOCKTextBox)
+        Me.FormSkin1.Controls.Add(Me.CURRENT_STOCKTextBox)
         Me.FormSkin1.Controls.Add(Me.Panel4)
         Me.FormSkin1.Controls.Add(Me.FlatStatusBar1)
         Me.FormSkin1.Controls.Add(Me.Panel3)
         Me.FormSkin1.Controls.Add(Me.Panel2)
         Me.FormSkin1.Controls.Add(Me.INVENTORYDataGridView)
         Me.FormSkin1.Controls.Add(ITEM_IDLabel)
-        Me.FormSkin1.Controls.Add(Me.ITEM_IDTextBox)
         Me.FormSkin1.Controls.Add(ITEM_NAMELabel)
-        Me.FormSkin1.Controls.Add(Me.ITEM_NAMETextBox)
         Me.FormSkin1.Controls.Add(UNITLabel)
-        Me.FormSkin1.Controls.Add(Me.UNITTextBox)
         Me.FormSkin1.Controls.Add(UNIT_PRICELabel)
-        Me.FormSkin1.Controls.Add(Me.UNIT_PRICETextBox)
         Me.FormSkin1.Controls.Add(INITIAL_STOCKLabel)
-        Me.FormSkin1.Controls.Add(Me.INITIAL_STOCKTextBox)
         Me.FormSkin1.Controls.Add(CURRENT_STOCKLabel)
-        Me.FormSkin1.Controls.Add(Me.CURRENT_STOCKTextBox)
         Me.FormSkin1.Controls.Add(Me.Panel1)
         Me.FormSkin1.Controls.Add(Me.FlatButton3)
         Me.FormSkin1.Controls.Add(Me.FlatButton1)
@@ -205,9 +203,71 @@ Partial Class InventoryForm
         Me.FormSkin1.HeaderMaximize = False
         Me.FormSkin1.Location = New System.Drawing.Point(0, 0)
         Me.FormSkin1.Name = "FormSkin1"
-        Me.FormSkin1.Size = New System.Drawing.Size(1097, 1012)
+        Me.FormSkin1.Size = New System.Drawing.Size(1110, 1012)
         Me.FormSkin1.TabIndex = 0
         Me.FormSkin1.Text = "StationPlus - Inventory"
+        '
+        'ITEM_IDLabel2
+        '
+        Me.ITEM_IDLabel2.BackColor = System.Drawing.Color.Transparent
+        Me.ITEM_IDLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ITEM_IDLabel2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.INVENTORYBindingSource, "ITEM_ID", True))
+        Me.ITEM_IDLabel2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!)
+        Me.ITEM_IDLabel2.Location = New System.Drawing.Point(145, 68)
+        Me.ITEM_IDLabel2.Name = "ITEM_IDLabel2"
+        Me.ITEM_IDLabel2.Size = New System.Drawing.Size(220, 36)
+        Me.ITEM_IDLabel2.TabIndex = 55
+        Me.ITEM_IDLabel2.Text = "Label5"
+        '
+        'INVENTORYBindingSource
+        '
+        Me.INVENTORYBindingSource.DataMember = "INVENTORY"
+        Me.INVENTORYBindingSource.DataSource = Me.StationPlusDataSet
+        '
+        'StationPlusDataSet
+        '
+        Me.StationPlusDataSet.DataSetName = "StationPlusDataSet"
+        Me.StationPlusDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ITEM_NAMETextBox
+        '
+        Me.ITEM_NAMETextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.INVENTORYBindingSource, "ITEM_NAME", True))
+        Me.ITEM_NAMETextBox.Location = New System.Drawing.Point(145, 113)
+        Me.ITEM_NAMETextBox.Name = "ITEM_NAMETextBox"
+        Me.ITEM_NAMETextBox.Size = New System.Drawing.Size(220, 34)
+        Me.ITEM_NAMETextBox.TabIndex = 57
+        '
+        'UNITTextBox
+        '
+        Me.UNITTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.INVENTORYBindingSource, "UNIT", True))
+        Me.UNITTextBox.Location = New System.Drawing.Point(145, 153)
+        Me.UNITTextBox.Name = "UNITTextBox"
+        Me.UNITTextBox.Size = New System.Drawing.Size(220, 34)
+        Me.UNITTextBox.TabIndex = 59
+        '
+        'UNIT_PRICETextBox
+        '
+        Me.UNIT_PRICETextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.INVENTORYBindingSource, "UNIT_PRICE", True))
+        Me.UNIT_PRICETextBox.Location = New System.Drawing.Point(560, 76)
+        Me.UNIT_PRICETextBox.Name = "UNIT_PRICETextBox"
+        Me.UNIT_PRICETextBox.Size = New System.Drawing.Size(221, 34)
+        Me.UNIT_PRICETextBox.TabIndex = 61
+        '
+        'INITIAL_STOCKTextBox
+        '
+        Me.INITIAL_STOCKTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.INVENTORYBindingSource, "INITIAL_STOCK", True))
+        Me.INITIAL_STOCKTextBox.Location = New System.Drawing.Point(560, 116)
+        Me.INITIAL_STOCKTextBox.Name = "INITIAL_STOCKTextBox"
+        Me.INITIAL_STOCKTextBox.Size = New System.Drawing.Size(221, 34)
+        Me.INITIAL_STOCKTextBox.TabIndex = 63
+        '
+        'CURRENT_STOCKTextBox
+        '
+        Me.CURRENT_STOCKTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.INVENTORYBindingSource, "CURRENT_STOCK", True))
+        Me.CURRENT_STOCKTextBox.Location = New System.Drawing.Point(560, 156)
+        Me.CURRENT_STOCKTextBox.Name = "CURRENT_STOCKTextBox"
+        Me.CURRENT_STOCKTextBox.Size = New System.Drawing.Size(221, 34)
+        Me.CURRENT_STOCKTextBox.TabIndex = 65
         '
         'Panel4
         '
@@ -282,16 +342,6 @@ Partial Class InventoryForm
         Me.DataGridViewTextBoxColumn12.HeaderText = "CURRENT_STOCK"
         Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
         Me.DataGridViewTextBoxColumn12.ReadOnly = True
-        '
-        'INVENTORYBindingSource
-        '
-        Me.INVENTORYBindingSource.DataMember = "INVENTORY"
-        Me.INVENTORYBindingSource.DataSource = Me.StationPlusDataSet
-        '
-        'StationPlusDataSet
-        '
-        Me.StationPlusDataSet.DataSetName = "StationPlusDataSet"
-        Me.StationPlusDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'FlatButton2
         '
@@ -383,7 +433,7 @@ Partial Class InventoryForm
         Me.FlatStatusBar1.Name = "FlatStatusBar1"
         Me.FlatStatusBar1.RectColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.FlatStatusBar1.ShowTimeDate = False
-        Me.FlatStatusBar1.Size = New System.Drawing.Size(1097, 23)
+        Me.FlatStatusBar1.Size = New System.Drawing.Size(1110, 23)
         Me.FlatStatusBar1.TabIndex = 53
         Me.FlatStatusBar1.Text = "FlatStatusBar1"
         Me.FlatStatusBar1.TextColor = System.Drawing.Color.White
@@ -395,12 +445,25 @@ Partial Class InventoryForm
         Me.Panel3.Controls.Add(Me.FlatButton15)
         Me.Panel3.Controls.Add(Me.FlatButton14)
         Me.Panel3.Controls.Add(Me.FlatButton13)
-        Me.Panel3.Controls.Add(Me.FlatButton12)
         Me.Panel3.Controls.Add(Me.Label4)
         Me.Panel3.Location = New System.Drawing.Point(802, 388)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(284, 131)
         Me.Panel3.TabIndex = 52
+        '
+        'FlatButton16
+        '
+        Me.FlatButton16.BackColor = System.Drawing.Color.Transparent
+        Me.FlatButton16.BaseColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.FlatButton16.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FlatButton16.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.FlatButton16.Location = New System.Drawing.Point(25, 49)
+        Me.FlatButton16.Name = "FlatButton16"
+        Me.FlatButton16.Rounded = False
+        Me.FlatButton16.Size = New System.Drawing.Size(106, 28)
+        Me.FlatButton16.TabIndex = 6
+        Me.FlatButton16.Text = "Default"
+        Me.FlatButton16.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
         '
         'FlatButton15
         '
@@ -443,20 +506,6 @@ Partial Class InventoryForm
         Me.FlatButton13.TabIndex = 3
         Me.FlatButton13.Text = "ITEM NAME"
         Me.FlatButton13.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
-        '
-        'FlatButton12
-        '
-        Me.FlatButton12.BackColor = System.Drawing.Color.Transparent
-        Me.FlatButton12.BaseColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.FlatButton12.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.FlatButton12.Font = New System.Drawing.Font("Segoe UI", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FlatButton12.Location = New System.Drawing.Point(25, 45)
-        Me.FlatButton12.Name = "FlatButton12"
-        Me.FlatButton12.Rounded = False
-        Me.FlatButton12.Size = New System.Drawing.Size(106, 32)
-        Me.FlatButton12.TabIndex = 2
-        Me.FlatButton12.Text = "ITEM ID"
-        Me.FlatButton12.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
         '
         'Label4
         '
@@ -503,99 +552,54 @@ Partial Class InventoryForm
         '
         'INVENTORYDataGridView
         '
+        Me.INVENTORYDataGridView.AllowUserToAddRows = False
+        Me.INVENTORYDataGridView.AllowUserToOrderColumns = True
         Me.INVENTORYDataGridView.AutoGenerateColumns = False
+        Me.INVENTORYDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.INVENTORYDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.INVENTORYDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        Me.INVENTORYDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ITEMNAMEDataGridViewTextBoxColumn, Me.UNITDataGridViewTextBoxColumn, Me.UNITPRICEDataGridViewTextBoxColumn, Me.INITIALSTOCKDataGridViewTextBoxColumn, Me.CURRENTSTOCKDataGridViewTextBoxColumn})
         Me.INVENTORYDataGridView.DataSource = Me.INVENTORYBindingSource
         Me.INVENTORYDataGridView.Location = New System.Drawing.Point(12, 213)
         Me.INVENTORYDataGridView.Name = "INVENTORYDataGridView"
+        Me.INVENTORYDataGridView.ReadOnly = True
         Me.INVENTORYDataGridView.RowTemplate.Height = 24
         Me.INVENTORYDataGridView.Size = New System.Drawing.Size(769, 306)
         Me.INVENTORYDataGridView.TabIndex = 50
         '
-        'DataGridViewTextBoxColumn1
+        'ITEMNAMEDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "ITEM_ID"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "ITEM_ID"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.ITEMNAMEDataGridViewTextBoxColumn.DataPropertyName = "ITEM_NAME"
+        Me.ITEMNAMEDataGridViewTextBoxColumn.HeaderText = "NAME"
+        Me.ITEMNAMEDataGridViewTextBoxColumn.Name = "ITEMNAMEDataGridViewTextBoxColumn"
+        Me.ITEMNAMEDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn2
+        'UNITDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "ITEM_NAME"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "ITEM_NAME"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.UNITDataGridViewTextBoxColumn.DataPropertyName = "UNIT"
+        Me.UNITDataGridViewTextBoxColumn.HeaderText = "UNIT"
+        Me.UNITDataGridViewTextBoxColumn.Name = "UNITDataGridViewTextBoxColumn"
+        Me.UNITDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn3
+        'UNITPRICEDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "UNIT"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "UNIT"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.UNITPRICEDataGridViewTextBoxColumn.DataPropertyName = "UNIT_PRICE"
+        Me.UNITPRICEDataGridViewTextBoxColumn.HeaderText = "PRICE"
+        Me.UNITPRICEDataGridViewTextBoxColumn.Name = "UNITPRICEDataGridViewTextBoxColumn"
+        Me.UNITPRICEDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn4
+        'INITIALSTOCKDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "UNIT_PRICE"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "UNIT_PRICE"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.INITIALSTOCKDataGridViewTextBoxColumn.DataPropertyName = "INITIAL_STOCK"
+        Me.INITIALSTOCKDataGridViewTextBoxColumn.HeaderText = "INITIAL STOCK"
+        Me.INITIALSTOCKDataGridViewTextBoxColumn.Name = "INITIALSTOCKDataGridViewTextBoxColumn"
+        Me.INITIALSTOCKDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn5
+        'CURRENTSTOCKDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "INITIAL_STOCK"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "INITIAL_STOCK"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "CURRENT_STOCK"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "CURRENT_STOCK"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        '
-        'ITEM_IDTextBox
-        '
-        Me.ITEM_IDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.INVENTORYBindingSource, "ITEM_ID", True))
-        Me.ITEM_IDTextBox.Location = New System.Drawing.Point(150, 73)
-        Me.ITEM_IDTextBox.Name = "ITEM_IDTextBox"
-        Me.ITEM_IDTextBox.Size = New System.Drawing.Size(214, 34)
-        Me.ITEM_IDTextBox.TabIndex = 40
-        '
-        'ITEM_NAMETextBox
-        '
-        Me.ITEM_NAMETextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.INVENTORYBindingSource, "ITEM_NAME", True))
-        Me.ITEM_NAMETextBox.Location = New System.Drawing.Point(150, 113)
-        Me.ITEM_NAMETextBox.Name = "ITEM_NAMETextBox"
-        Me.ITEM_NAMETextBox.Size = New System.Drawing.Size(214, 34)
-        Me.ITEM_NAMETextBox.TabIndex = 42
-        '
-        'UNITTextBox
-        '
-        Me.UNITTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.INVENTORYBindingSource, "UNIT", True))
-        Me.UNITTextBox.Location = New System.Drawing.Point(150, 153)
-        Me.UNITTextBox.Name = "UNITTextBox"
-        Me.UNITTextBox.Size = New System.Drawing.Size(214, 34)
-        Me.UNITTextBox.TabIndex = 44
-        '
-        'UNIT_PRICETextBox
-        '
-        Me.UNIT_PRICETextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.INVENTORYBindingSource, "UNIT_PRICE", True))
-        Me.UNIT_PRICETextBox.Location = New System.Drawing.Point(567, 73)
-        Me.UNIT_PRICETextBox.Name = "UNIT_PRICETextBox"
-        Me.UNIT_PRICETextBox.Size = New System.Drawing.Size(214, 34)
-        Me.UNIT_PRICETextBox.TabIndex = 46
-        '
-        'INITIAL_STOCKTextBox
-        '
-        Me.INITIAL_STOCKTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.INVENTORYBindingSource, "INITIAL_STOCK", True))
-        Me.INITIAL_STOCKTextBox.Location = New System.Drawing.Point(567, 113)
-        Me.INITIAL_STOCKTextBox.Name = "INITIAL_STOCKTextBox"
-        Me.INITIAL_STOCKTextBox.Size = New System.Drawing.Size(214, 34)
-        Me.INITIAL_STOCKTextBox.TabIndex = 48
-        '
-        'CURRENT_STOCKTextBox
-        '
-        Me.CURRENT_STOCKTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.INVENTORYBindingSource, "CURRENT_STOCK", True))
-        Me.CURRENT_STOCKTextBox.Location = New System.Drawing.Point(567, 153)
-        Me.CURRENT_STOCKTextBox.Name = "CURRENT_STOCKTextBox"
-        Me.CURRENT_STOCKTextBox.Size = New System.Drawing.Size(214, 34)
-        Me.CURRENT_STOCKTextBox.TabIndex = 50
+        Me.CURRENTSTOCKDataGridViewTextBoxColumn.DataPropertyName = "CURRENT_STOCK"
+        Me.CURRENTSTOCKDataGridViewTextBoxColumn.HeaderText = "CURRENT STOCK"
+        Me.CURRENTSTOCKDataGridViewTextBoxColumn.Name = "CURRENTSTOCKDataGridViewTextBoxColumn"
+        Me.CURRENTSTOCKDataGridViewTextBoxColumn.ReadOnly = True
         '
         'Panel1
         '
@@ -767,25 +771,11 @@ Partial Class InventoryForm
         Me.TableAdapterManager.SPLUS_USERSTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = StationPlus.StationPlusDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'FlatButton16
-        '
-        Me.FlatButton16.BackColor = System.Drawing.Color.Transparent
-        Me.FlatButton16.BaseColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.FlatButton16.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.FlatButton16.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.FlatButton16.Location = New System.Drawing.Point(152, 11)
-        Me.FlatButton16.Name = "FlatButton16"
-        Me.FlatButton16.Rounded = False
-        Me.FlatButton16.Size = New System.Drawing.Size(106, 28)
-        Me.FlatButton16.TabIndex = 6
-        Me.FlatButton16.Text = "Default"
-        Me.FlatButton16.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
-        '
         'InventoryForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1097, 1012)
+        Me.ClientSize = New System.Drawing.Size(1110, 1012)
         Me.Controls.Add(Me.FormSkin1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "InventoryForm"
@@ -794,11 +784,11 @@ Partial Class InventoryForm
         Me.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.FormSkin1.ResumeLayout(False)
         Me.FormSkin1.PerformLayout()
+        CType(Me.INVENTORYBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StationPlusDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         CType(Me.INVENTORYDataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.INVENTORYBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.StationPlusDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel2.ResumeLayout(False)
@@ -826,18 +816,6 @@ Partial Class InventoryForm
     Friend WithEvents INVENTORYTableAdapter As StationPlusDataSetTableAdapters.INVENTORYTableAdapter
     Friend WithEvents TableAdapterManager As StationPlusDataSetTableAdapters.TableAdapterManager
     Friend WithEvents INVENTORYDataGridView As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
-    Friend WithEvents ITEM_IDTextBox As TextBox
-    Friend WithEvents ITEM_NAMETextBox As TextBox
-    Friend WithEvents UNITTextBox As TextBox
-    Friend WithEvents UNIT_PRICETextBox As TextBox
-    Friend WithEvents INITIAL_STOCKTextBox As TextBox
-    Friend WithEvents CURRENT_STOCKTextBox As TextBox
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label4 As Label
     Friend WithEvents Panel2 As Panel
@@ -847,7 +825,6 @@ Partial Class InventoryForm
     Friend WithEvents FlatButton15 As FlatButton
     Friend WithEvents FlatButton14 As FlatButton
     Friend WithEvents FlatButton13 As FlatButton
-    Friend WithEvents FlatButton12 As FlatButton
     Friend WithEvents Panel4 As Panel
     Friend WithEvents FlatButton2 As FlatButton
     Friend WithEvents RadioButton4 As System.Windows.Forms.RadioButton
@@ -864,4 +841,15 @@ Partial Class InventoryForm
     Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
     Friend WithEvents FlatButton16 As FlatButton
+    Friend WithEvents ITEM_IDLabel2 As Label
+    Friend WithEvents ITEM_NAMETextBox As TextBox
+    Friend WithEvents UNITTextBox As TextBox
+    Friend WithEvents UNIT_PRICETextBox As TextBox
+    Friend WithEvents INITIAL_STOCKTextBox As TextBox
+    Friend WithEvents CURRENT_STOCKTextBox As TextBox
+    Friend WithEvents ITEMNAMEDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UNITDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UNITPRICEDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents INITIALSTOCKDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CURRENTSTOCKDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

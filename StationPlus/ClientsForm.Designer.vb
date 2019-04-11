@@ -33,18 +33,18 @@ Partial Class ClientsForm
         Dim EMAILLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ClientsForm))
         Me.StationPlusDataSet = New StationPlus.StationPlusDataSet()
-        Me.CLIENTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CLIENTSTableAdapter = New StationPlus.StationPlusDataSetTableAdapters.CLIENTSTableAdapter()
         Me.TableAdapterManager = New StationPlus.StationPlusDataSetTableAdapters.TableAdapterManager()
+        Me.CLIENTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.FormSkin1 = New StationPlus.FormSkin()
+        Me.CLIENT_FNTextBox1 = New System.Windows.Forms.TextBox()
+        Me.CLIENT_LNTextBox1 = New System.Windows.Forms.TextBox()
+        Me.MOBILETextBox1 = New System.Windows.Forms.TextBox()
+        Me.CORP_MOBILETextBox1 = New System.Windows.Forms.TextBox()
+        Me.WEBSITETextBox1 = New System.Windows.Forms.TextBox()
+        Me.EMAILTextBox1 = New System.Windows.Forms.TextBox()
+        Me.C_ADDRESSTextBox1 = New System.Windows.Forms.TextBox()
         Me.CLIENT_IDTextBox = New System.Windows.Forms.TextBox()
-        Me.CLIENT_FNTextBox = New System.Windows.Forms.TextBox()
-        Me.CLIENT_LNTextBox = New System.Windows.Forms.TextBox()
-        Me.MOBILETextBox = New System.Windows.Forms.TextBox()
-        Me.CORP_MOBILETextBox = New System.Windows.Forms.TextBox()
-        Me.WEBSITETextBox = New System.Windows.Forms.TextBox()
-        Me.C_ADDRESSTextBox = New System.Windows.Forms.TextBox()
-        Me.EMAILTextBox = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.FlatButton12 = New StationPlus.FlatButton()
@@ -62,16 +62,14 @@ Partial Class ClientsForm
         Me.FlatButton6 = New StationPlus.FlatButton()
         Me.FlatStatusBar2 = New StationPlus.FlatStatusBar()
         Me.CLIENTSDataGridView = New System.Windows.Forms.DataGridView()
-        Me.CLIENTIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CLIENTFNDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CLIENTLNDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MOBILEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.WEBSITEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EMAILDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FlatButton3 = New StationPlus.FlatButton()
         Me.FlatButton1 = New StationPlus.FlatButton()
         Me.FlatButton2 = New StationPlus.FlatButton()
         Me.FlatStatusBar1 = New StationPlus.FlatStatusBar()
+        Me.CLIENTFNDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CLIENTLNDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MOBILEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EMAILDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CLIENT_IDLabel = New System.Windows.Forms.Label()
         CLIENT_FNLabel = New System.Windows.Forms.Label()
         CLIENT_LNLabel = New System.Windows.Forms.Label()
@@ -88,15 +86,106 @@ Partial Class ClientsForm
         CType(Me.CLIENTSDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'CLIENT_IDLabel
+        '
+        CLIENT_IDLabel.AutoSize = True
+        CLIENT_IDLabel.BackColor = System.Drawing.Color.Transparent
+        CLIENT_IDLabel.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        CLIENT_IDLabel.ForeColor = System.Drawing.Color.White
+        CLIENT_IDLabel.Location = New System.Drawing.Point(26, 71)
+        CLIENT_IDLabel.Name = "CLIENT_IDLabel"
+        CLIENT_IDLabel.Size = New System.Drawing.Size(107, 28)
+        CLIENT_IDLabel.TabIndex = 46
+        CLIENT_IDLabel.Text = "CLIENT ID:"
+        '
+        'CLIENT_FNLabel
+        '
+        CLIENT_FNLabel.AutoSize = True
+        CLIENT_FNLabel.BackColor = System.Drawing.Color.Transparent
+        CLIENT_FNLabel.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        CLIENT_FNLabel.ForeColor = System.Drawing.Color.White
+        CLIENT_FNLabel.Location = New System.Drawing.Point(26, 111)
+        CLIENT_FNLabel.Name = "CLIENT_FNLabel"
+        CLIENT_FNLabel.Size = New System.Drawing.Size(112, 28)
+        CLIENT_FNLabel.TabIndex = 48
+        CLIENT_FNLabel.Text = "CLIENT FN:"
+        '
+        'CLIENT_LNLabel
+        '
+        CLIENT_LNLabel.AutoSize = True
+        CLIENT_LNLabel.BackColor = System.Drawing.Color.Transparent
+        CLIENT_LNLabel.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        CLIENT_LNLabel.ForeColor = System.Drawing.Color.White
+        CLIENT_LNLabel.Location = New System.Drawing.Point(26, 151)
+        CLIENT_LNLabel.Name = "CLIENT_LNLabel"
+        CLIENT_LNLabel.Size = New System.Drawing.Size(112, 28)
+        CLIENT_LNLabel.TabIndex = 50
+        CLIENT_LNLabel.Text = "CLIENT LN:"
+        '
+        'MOBILELabel
+        '
+        MOBILELabel.AutoSize = True
+        MOBILELabel.BackColor = System.Drawing.Color.Transparent
+        MOBILELabel.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        MOBILELabel.ForeColor = System.Drawing.Color.White
+        MOBILELabel.Location = New System.Drawing.Point(26, 191)
+        MOBILELabel.Name = "MOBILELabel"
+        MOBILELabel.Size = New System.Drawing.Size(88, 28)
+        MOBILELabel.TabIndex = 52
+        MOBILELabel.Text = "MOBILE:"
+        '
+        'CORP_MOBILELabel
+        '
+        CORP_MOBILELabel.AutoSize = True
+        CORP_MOBILELabel.BackColor = System.Drawing.Color.Transparent
+        CORP_MOBILELabel.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        CORP_MOBILELabel.ForeColor = System.Drawing.Color.White
+        CORP_MOBILELabel.Location = New System.Drawing.Point(396, 71)
+        CORP_MOBILELabel.Name = "CORP_MOBILELabel"
+        CORP_MOBILELabel.Size = New System.Drawing.Size(145, 28)
+        CORP_MOBILELabel.TabIndex = 54
+        CORP_MOBILELabel.Text = "CORP MOBILE:"
+        '
+        'WEBSITELabel
+        '
+        WEBSITELabel.AutoSize = True
+        WEBSITELabel.BackColor = System.Drawing.Color.Transparent
+        WEBSITELabel.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        WEBSITELabel.ForeColor = System.Drawing.Color.White
+        WEBSITELabel.Location = New System.Drawing.Point(396, 111)
+        WEBSITELabel.Name = "WEBSITELabel"
+        WEBSITELabel.Size = New System.Drawing.Size(96, 28)
+        WEBSITELabel.TabIndex = 56
+        WEBSITELabel.Text = "WEBSITE:"
+        '
+        'C_ADDRESSLabel
+        '
+        C_ADDRESSLabel.AutoSize = True
+        C_ADDRESSLabel.BackColor = System.Drawing.Color.Transparent
+        C_ADDRESSLabel.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        C_ADDRESSLabel.ForeColor = System.Drawing.Color.White
+        C_ADDRESSLabel.Location = New System.Drawing.Point(396, 151)
+        C_ADDRESSLabel.Name = "C_ADDRESSLabel"
+        C_ADDRESSLabel.Size = New System.Drawing.Size(102, 28)
+        C_ADDRESSLabel.TabIndex = 58
+        C_ADDRESSLabel.Text = "ADDRESS:"
+        '
+        'EMAILLabel
+        '
+        EMAILLabel.AutoSize = True
+        EMAILLabel.BackColor = System.Drawing.Color.Transparent
+        EMAILLabel.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        EMAILLabel.ForeColor = System.Drawing.Color.White
+        EMAILLabel.Location = New System.Drawing.Point(396, 191)
+        EMAILLabel.Name = "EMAILLabel"
+        EMAILLabel.Size = New System.Drawing.Size(74, 28)
+        EMAILLabel.TabIndex = 60
+        EMAILLabel.Text = "EMAIL:"
+        '
         'StationPlusDataSet
         '
         Me.StationPlusDataSet.DataSetName = "StationPlusDataSet"
         Me.StationPlusDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'CLIENTSBindingSource
-        '
-        Me.CLIENTSBindingSource.DataMember = "CLIENTS"
-        Me.CLIENTSBindingSource.DataSource = Me.StationPlusDataSet
         '
         'CLIENTSTableAdapter
         '
@@ -112,27 +201,32 @@ Partial Class ClientsForm
         Me.TableAdapterManager.SPLUS_USERSTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = StationPlus.StationPlusDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'CLIENTSBindingSource
+        '
+        Me.CLIENTSBindingSource.DataMember = "CLIENTS"
+        Me.CLIENTSBindingSource.DataSource = Me.StationPlusDataSet
+        '
         'FormSkin1
         '
         Me.FormSkin1.BackColor = System.Drawing.Color.White
         Me.FormSkin1.BaseColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(73, Byte), Integer))
         Me.FormSkin1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(53, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.FormSkin1.Controls.Add(Me.CLIENT_FNTextBox1)
+        Me.FormSkin1.Controls.Add(Me.CLIENT_LNTextBox1)
+        Me.FormSkin1.Controls.Add(Me.MOBILETextBox1)
+        Me.FormSkin1.Controls.Add(Me.CORP_MOBILETextBox1)
+        Me.FormSkin1.Controls.Add(Me.WEBSITETextBox1)
+        Me.FormSkin1.Controls.Add(Me.EMAILTextBox1)
+        Me.FormSkin1.Controls.Add(Me.C_ADDRESSTextBox1)
         Me.FormSkin1.Controls.Add(CLIENT_IDLabel)
         Me.FormSkin1.Controls.Add(Me.CLIENT_IDTextBox)
         Me.FormSkin1.Controls.Add(CLIENT_FNLabel)
-        Me.FormSkin1.Controls.Add(Me.CLIENT_FNTextBox)
         Me.FormSkin1.Controls.Add(CLIENT_LNLabel)
-        Me.FormSkin1.Controls.Add(Me.CLIENT_LNTextBox)
         Me.FormSkin1.Controls.Add(MOBILELabel)
-        Me.FormSkin1.Controls.Add(Me.MOBILETextBox)
         Me.FormSkin1.Controls.Add(CORP_MOBILELabel)
-        Me.FormSkin1.Controls.Add(Me.CORP_MOBILETextBox)
         Me.FormSkin1.Controls.Add(WEBSITELabel)
-        Me.FormSkin1.Controls.Add(Me.WEBSITETextBox)
         Me.FormSkin1.Controls.Add(C_ADDRESSLabel)
-        Me.FormSkin1.Controls.Add(Me.C_ADDRESSTextBox)
         Me.FormSkin1.Controls.Add(EMAILLabel)
-        Me.FormSkin1.Controls.Add(Me.EMAILTextBox)
         Me.FormSkin1.Controls.Add(Me.Label3)
         Me.FormSkin1.Controls.Add(Me.TextBox1)
         Me.FormSkin1.Controls.Add(Me.FlatButton12)
@@ -149,169 +243,76 @@ Partial Class ClientsForm
         Me.FormSkin1.HeaderMaximize = False
         Me.FormSkin1.Location = New System.Drawing.Point(0, 0)
         Me.FormSkin1.Name = "FormSkin1"
-        Me.FormSkin1.Size = New System.Drawing.Size(1100, 718)
+        Me.FormSkin1.Size = New System.Drawing.Size(1100, 730)
         Me.FormSkin1.TabIndex = 0
         Me.FormSkin1.Text = "StationPlus - Clients"
         '
-        'CLIENT_IDLabel
+        'CLIENT_FNTextBox1
         '
-        CLIENT_IDLabel.AutoSize = True
-        CLIENT_IDLabel.BackColor = System.Drawing.Color.Transparent
-        CLIENT_IDLabel.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        CLIENT_IDLabel.ForeColor = System.Drawing.Color.White
-        CLIENT_IDLabel.Location = New System.Drawing.Point(26, 71)
-        CLIENT_IDLabel.Name = "CLIENT_IDLabel"
-        CLIENT_IDLabel.Size = New System.Drawing.Size(107, 28)
-        CLIENT_IDLabel.TabIndex = 46
-        CLIENT_IDLabel.Text = "CLIENT ID:"
+        Me.CLIENT_FNTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CLIENTSBindingSource, "CLIENT_FN", True))
+        Me.CLIENT_FNTextBox1.Location = New System.Drawing.Point(170, 106)
+        Me.CLIENT_FNTextBox1.Name = "CLIENT_FNTextBox1"
+        Me.CLIENT_FNTextBox1.Size = New System.Drawing.Size(214, 34)
+        Me.CLIENT_FNTextBox1.TabIndex = 64
+        '
+        'CLIENT_LNTextBox1
+        '
+        Me.CLIENT_LNTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CLIENTSBindingSource, "CLIENT_LN", True))
+        Me.CLIENT_LNTextBox1.Location = New System.Drawing.Point(170, 148)
+        Me.CLIENT_LNTextBox1.Name = "CLIENT_LNTextBox1"
+        Me.CLIENT_LNTextBox1.Size = New System.Drawing.Size(214, 34)
+        Me.CLIENT_LNTextBox1.TabIndex = 66
+        '
+        'MOBILETextBox1
+        '
+        Me.MOBILETextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CLIENTSBindingSource, "MOBILE", True))
+        Me.MOBILETextBox1.Location = New System.Drawing.Point(170, 188)
+        Me.MOBILETextBox1.Name = "MOBILETextBox1"
+        Me.MOBILETextBox1.Size = New System.Drawing.Size(214, 34)
+        Me.MOBILETextBox1.TabIndex = 68
+        '
+        'CORP_MOBILETextBox1
+        '
+        Me.CORP_MOBILETextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CLIENTSBindingSource, "CORP_MOBILE", True))
+        Me.CORP_MOBILETextBox1.Location = New System.Drawing.Point(549, 68)
+        Me.CORP_MOBILETextBox1.Name = "CORP_MOBILETextBox1"
+        Me.CORP_MOBILETextBox1.Size = New System.Drawing.Size(214, 34)
+        Me.CORP_MOBILETextBox1.TabIndex = 70
+        '
+        'WEBSITETextBox1
+        '
+        Me.WEBSITETextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CLIENTSBindingSource, "WEBSITE", True))
+        Me.WEBSITETextBox1.Location = New System.Drawing.Point(549, 108)
+        Me.WEBSITETextBox1.Name = "WEBSITETextBox1"
+        Me.WEBSITETextBox1.Size = New System.Drawing.Size(214, 34)
+        Me.WEBSITETextBox1.TabIndex = 72
+        '
+        'EMAILTextBox1
+        '
+        Me.EMAILTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CLIENTSBindingSource, "EMAIL", True))
+        Me.EMAILTextBox1.Location = New System.Drawing.Point(549, 148)
+        Me.EMAILTextBox1.Name = "EMAILTextBox1"
+        Me.EMAILTextBox1.Size = New System.Drawing.Size(214, 34)
+        Me.EMAILTextBox1.TabIndex = 74
+        '
+        'C_ADDRESSTextBox1
+        '
+        Me.C_ADDRESSTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CLIENTSBindingSource, "C_ADDRESS", True))
+        Me.C_ADDRESSTextBox1.Location = New System.Drawing.Point(549, 188)
+        Me.C_ADDRESSTextBox1.Name = "C_ADDRESSTextBox1"
+        Me.C_ADDRESSTextBox1.Size = New System.Drawing.Size(214, 34)
+        Me.C_ADDRESSTextBox1.TabIndex = 76
         '
         'CLIENT_IDTextBox
         '
+        Me.CLIENT_IDTextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(73, Byte), Integer))
+        Me.CLIENT_IDTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CLIENT_IDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CLIENTSBindingSource, "CLIENT_ID", True))
         Me.CLIENT_IDTextBox.Location = New System.Drawing.Point(170, 68)
         Me.CLIENT_IDTextBox.Name = "CLIENT_IDTextBox"
+        Me.CLIENT_IDTextBox.ReadOnly = True
         Me.CLIENT_IDTextBox.Size = New System.Drawing.Size(214, 34)
         Me.CLIENT_IDTextBox.TabIndex = 47
-        '
-        'CLIENT_FNLabel
-        '
-        CLIENT_FNLabel.AutoSize = True
-        CLIENT_FNLabel.BackColor = System.Drawing.Color.Transparent
-        CLIENT_FNLabel.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        CLIENT_FNLabel.ForeColor = System.Drawing.Color.White
-        CLIENT_FNLabel.Location = New System.Drawing.Point(26, 111)
-        CLIENT_FNLabel.Name = "CLIENT_FNLabel"
-        CLIENT_FNLabel.Size = New System.Drawing.Size(112, 28)
-        CLIENT_FNLabel.TabIndex = 48
-        CLIENT_FNLabel.Text = "CLIENT FN:"
-        '
-        'CLIENT_FNTextBox
-        '
-        Me.CLIENT_FNTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CLIENTSBindingSource, "CLIENT_FN", True))
-        Me.CLIENT_FNTextBox.Location = New System.Drawing.Point(170, 108)
-        Me.CLIENT_FNTextBox.Name = "CLIENT_FNTextBox"
-        Me.CLIENT_FNTextBox.Size = New System.Drawing.Size(214, 34)
-        Me.CLIENT_FNTextBox.TabIndex = 49
-        '
-        'CLIENT_LNLabel
-        '
-        CLIENT_LNLabel.AutoSize = True
-        CLIENT_LNLabel.BackColor = System.Drawing.Color.Transparent
-        CLIENT_LNLabel.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        CLIENT_LNLabel.ForeColor = System.Drawing.Color.White
-        CLIENT_LNLabel.Location = New System.Drawing.Point(26, 151)
-        CLIENT_LNLabel.Name = "CLIENT_LNLabel"
-        CLIENT_LNLabel.Size = New System.Drawing.Size(112, 28)
-        CLIENT_LNLabel.TabIndex = 50
-        CLIENT_LNLabel.Text = "CLIENT LN:"
-        '
-        'CLIENT_LNTextBox
-        '
-        Me.CLIENT_LNTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CLIENTSBindingSource, "CLIENT_LN", True))
-        Me.CLIENT_LNTextBox.Location = New System.Drawing.Point(170, 148)
-        Me.CLIENT_LNTextBox.Name = "CLIENT_LNTextBox"
-        Me.CLIENT_LNTextBox.Size = New System.Drawing.Size(214, 34)
-        Me.CLIENT_LNTextBox.TabIndex = 51
-        '
-        'MOBILELabel
-        '
-        MOBILELabel.AutoSize = True
-        MOBILELabel.BackColor = System.Drawing.Color.Transparent
-        MOBILELabel.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        MOBILELabel.ForeColor = System.Drawing.Color.White
-        MOBILELabel.Location = New System.Drawing.Point(26, 191)
-        MOBILELabel.Name = "MOBILELabel"
-        MOBILELabel.Size = New System.Drawing.Size(88, 28)
-        MOBILELabel.TabIndex = 52
-        MOBILELabel.Text = "MOBILE:"
-        '
-        'MOBILETextBox
-        '
-        Me.MOBILETextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CLIENTSBindingSource, "MOBILE", True))
-        Me.MOBILETextBox.Location = New System.Drawing.Point(170, 188)
-        Me.MOBILETextBox.Name = "MOBILETextBox"
-        Me.MOBILETextBox.Size = New System.Drawing.Size(214, 34)
-        Me.MOBILETextBox.TabIndex = 53
-        '
-        'CORP_MOBILELabel
-        '
-        CORP_MOBILELabel.AutoSize = True
-        CORP_MOBILELabel.BackColor = System.Drawing.Color.Transparent
-        CORP_MOBILELabel.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        CORP_MOBILELabel.ForeColor = System.Drawing.Color.White
-        CORP_MOBILELabel.Location = New System.Drawing.Point(396, 71)
-        CORP_MOBILELabel.Name = "CORP_MOBILELabel"
-        CORP_MOBILELabel.Size = New System.Drawing.Size(145, 28)
-        CORP_MOBILELabel.TabIndex = 54
-        CORP_MOBILELabel.Text = "CORP MOBILE:"
-        '
-        'CORP_MOBILETextBox
-        '
-        Me.CORP_MOBILETextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CLIENTSBindingSource, "CORP_MOBILE", True))
-        Me.CORP_MOBILETextBox.Location = New System.Drawing.Point(549, 68)
-        Me.CORP_MOBILETextBox.Name = "CORP_MOBILETextBox"
-        Me.CORP_MOBILETextBox.Size = New System.Drawing.Size(214, 34)
-        Me.CORP_MOBILETextBox.TabIndex = 55
-        '
-        'WEBSITELabel
-        '
-        WEBSITELabel.AutoSize = True
-        WEBSITELabel.BackColor = System.Drawing.Color.Transparent
-        WEBSITELabel.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        WEBSITELabel.ForeColor = System.Drawing.Color.White
-        WEBSITELabel.Location = New System.Drawing.Point(396, 111)
-        WEBSITELabel.Name = "WEBSITELabel"
-        WEBSITELabel.Size = New System.Drawing.Size(96, 28)
-        WEBSITELabel.TabIndex = 56
-        WEBSITELabel.Text = "WEBSITE:"
-        '
-        'WEBSITETextBox
-        '
-        Me.WEBSITETextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CLIENTSBindingSource, "WEBSITE", True))
-        Me.WEBSITETextBox.Location = New System.Drawing.Point(549, 108)
-        Me.WEBSITETextBox.Name = "WEBSITETextBox"
-        Me.WEBSITETextBox.Size = New System.Drawing.Size(214, 34)
-        Me.WEBSITETextBox.TabIndex = 57
-        '
-        'C_ADDRESSLabel
-        '
-        C_ADDRESSLabel.AutoSize = True
-        C_ADDRESSLabel.BackColor = System.Drawing.Color.Transparent
-        C_ADDRESSLabel.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        C_ADDRESSLabel.ForeColor = System.Drawing.Color.White
-        C_ADDRESSLabel.Location = New System.Drawing.Point(396, 151)
-        C_ADDRESSLabel.Name = "C_ADDRESSLabel"
-        C_ADDRESSLabel.Size = New System.Drawing.Size(102, 28)
-        C_ADDRESSLabel.TabIndex = 58
-        C_ADDRESSLabel.Text = "ADDRESS:"
-        '
-        'C_ADDRESSTextBox
-        '
-        Me.C_ADDRESSTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CLIENTSBindingSource, "C_ADDRESS", True))
-        Me.C_ADDRESSTextBox.Location = New System.Drawing.Point(549, 148)
-        Me.C_ADDRESSTextBox.Name = "C_ADDRESSTextBox"
-        Me.C_ADDRESSTextBox.Size = New System.Drawing.Size(214, 34)
-        Me.C_ADDRESSTextBox.TabIndex = 59
-        '
-        'EMAILLabel
-        '
-        EMAILLabel.AutoSize = True
-        EMAILLabel.BackColor = System.Drawing.Color.Transparent
-        EMAILLabel.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        EMAILLabel.ForeColor = System.Drawing.Color.White
-        EMAILLabel.Location = New System.Drawing.Point(396, 191)
-        EMAILLabel.Name = "EMAILLabel"
-        EMAILLabel.Size = New System.Drawing.Size(74, 28)
-        EMAILLabel.TabIndex = 60
-        EMAILLabel.Text = "EMAIL:"
-        '
-        'EMAILTextBox
-        '
-        Me.EMAILTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CLIENTSBindingSource, "EMAIL", True))
-        Me.EMAILTextBox.Location = New System.Drawing.Point(549, 188)
-        Me.EMAILTextBox.Name = "EMAILTextBox"
-        Me.EMAILTextBox.Size = New System.Drawing.Size(214, 34)
-        Me.EMAILTextBox.TabIndex = 61
         '
         'Label3
         '
@@ -512,7 +513,7 @@ Partial Class ClientsForm
         Me.FlatStatusBar2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.FlatStatusBar2.Font = New System.Drawing.Font("Segoe UI", 8.0!)
         Me.FlatStatusBar2.ForeColor = System.Drawing.Color.White
-        Me.FlatStatusBar2.Location = New System.Drawing.Point(0, 695)
+        Me.FlatStatusBar2.Location = New System.Drawing.Point(0, 707)
         Me.FlatStatusBar2.Name = "FlatStatusBar2"
         Me.FlatStatusBar2.RectColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.FlatStatusBar2.ShowTimeDate = False
@@ -527,8 +528,9 @@ Partial Class ClientsForm
         Me.CLIENTSDataGridView.AllowUserToDeleteRows = False
         Me.CLIENTSDataGridView.AllowUserToOrderColumns = True
         Me.CLIENTSDataGridView.AutoGenerateColumns = False
+        Me.CLIENTSDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.CLIENTSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.CLIENTSDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CLIENTIDDataGridViewTextBoxColumn, Me.CLIENTFNDataGridViewTextBoxColumn, Me.CLIENTLNDataGridViewTextBoxColumn, Me.MOBILEDataGridViewTextBoxColumn, Me.WEBSITEDataGridViewTextBoxColumn, Me.EMAILDataGridViewTextBoxColumn})
+        Me.CLIENTSDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CLIENTFNDataGridViewTextBoxColumn, Me.CLIENTLNDataGridViewTextBoxColumn, Me.MOBILEDataGridViewTextBoxColumn, Me.EMAILDataGridViewTextBoxColumn})
         Me.CLIENTSDataGridView.DataSource = Me.CLIENTSBindingSource
         Me.CLIENTSDataGridView.Location = New System.Drawing.Point(17, 241)
         Me.CLIENTSDataGridView.Name = "CLIENTSDataGridView"
@@ -536,48 +538,6 @@ Partial Class ClientsForm
         Me.CLIENTSDataGridView.RowTemplate.Height = 24
         Me.CLIENTSDataGridView.Size = New System.Drawing.Size(746, 367)
         Me.CLIENTSDataGridView.TabIndex = 32
-        '
-        'CLIENTIDDataGridViewTextBoxColumn
-        '
-        Me.CLIENTIDDataGridViewTextBoxColumn.DataPropertyName = "CLIENT_ID"
-        Me.CLIENTIDDataGridViewTextBoxColumn.HeaderText = "CLIENT_ID"
-        Me.CLIENTIDDataGridViewTextBoxColumn.Name = "CLIENTIDDataGridViewTextBoxColumn"
-        Me.CLIENTIDDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CLIENTFNDataGridViewTextBoxColumn
-        '
-        Me.CLIENTFNDataGridViewTextBoxColumn.DataPropertyName = "CLIENT_FN"
-        Me.CLIENTFNDataGridViewTextBoxColumn.HeaderText = "CLIENT_FN"
-        Me.CLIENTFNDataGridViewTextBoxColumn.Name = "CLIENTFNDataGridViewTextBoxColumn"
-        Me.CLIENTFNDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CLIENTLNDataGridViewTextBoxColumn
-        '
-        Me.CLIENTLNDataGridViewTextBoxColumn.DataPropertyName = "CLIENT_LN"
-        Me.CLIENTLNDataGridViewTextBoxColumn.HeaderText = "CLIENT_LN"
-        Me.CLIENTLNDataGridViewTextBoxColumn.Name = "CLIENTLNDataGridViewTextBoxColumn"
-        Me.CLIENTLNDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'MOBILEDataGridViewTextBoxColumn
-        '
-        Me.MOBILEDataGridViewTextBoxColumn.DataPropertyName = "MOBILE"
-        Me.MOBILEDataGridViewTextBoxColumn.HeaderText = "MOBILE"
-        Me.MOBILEDataGridViewTextBoxColumn.Name = "MOBILEDataGridViewTextBoxColumn"
-        Me.MOBILEDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'WEBSITEDataGridViewTextBoxColumn
-        '
-        Me.WEBSITEDataGridViewTextBoxColumn.DataPropertyName = "WEBSITE"
-        Me.WEBSITEDataGridViewTextBoxColumn.HeaderText = "WEBSITE"
-        Me.WEBSITEDataGridViewTextBoxColumn.Name = "WEBSITEDataGridViewTextBoxColumn"
-        Me.WEBSITEDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'EMAILDataGridViewTextBoxColumn
-        '
-        Me.EMAILDataGridViewTextBoxColumn.DataPropertyName = "EMAIL"
-        Me.EMAILDataGridViewTextBoxColumn.HeaderText = "EMAIL"
-        Me.EMAILDataGridViewTextBoxColumn.Name = "EMAILDataGridViewTextBoxColumn"
-        Me.EMAILDataGridViewTextBoxColumn.ReadOnly = True
         '
         'FlatButton3
         '
@@ -636,11 +596,39 @@ Partial Class ClientsForm
         Me.FlatStatusBar1.Text = "FlatStatusBar1"
         Me.FlatStatusBar1.TextColor = System.Drawing.Color.White
         '
+        'CLIENTFNDataGridViewTextBoxColumn
+        '
+        Me.CLIENTFNDataGridViewTextBoxColumn.DataPropertyName = "CLIENT_FN"
+        Me.CLIENTFNDataGridViewTextBoxColumn.HeaderText = "NAME"
+        Me.CLIENTFNDataGridViewTextBoxColumn.Name = "CLIENTFNDataGridViewTextBoxColumn"
+        Me.CLIENTFNDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CLIENTLNDataGridViewTextBoxColumn
+        '
+        Me.CLIENTLNDataGridViewTextBoxColumn.DataPropertyName = "CLIENT_LN"
+        Me.CLIENTLNDataGridViewTextBoxColumn.HeaderText = "LAST NAME"
+        Me.CLIENTLNDataGridViewTextBoxColumn.Name = "CLIENTLNDataGridViewTextBoxColumn"
+        Me.CLIENTLNDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'MOBILEDataGridViewTextBoxColumn
+        '
+        Me.MOBILEDataGridViewTextBoxColumn.DataPropertyName = "MOBILE"
+        Me.MOBILEDataGridViewTextBoxColumn.HeaderText = "MOBILE"
+        Me.MOBILEDataGridViewTextBoxColumn.Name = "MOBILEDataGridViewTextBoxColumn"
+        Me.MOBILEDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'EMAILDataGridViewTextBoxColumn
+        '
+        Me.EMAILDataGridViewTextBoxColumn.DataPropertyName = "EMAIL"
+        Me.EMAILDataGridViewTextBoxColumn.HeaderText = "EMAIL"
+        Me.EMAILDataGridViewTextBoxColumn.Name = "EMAILDataGridViewTextBoxColumn"
+        Me.EMAILDataGridViewTextBoxColumn.ReadOnly = True
+        '
         'ClientsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1100, 718)
+        Me.ClientSize = New System.Drawing.Size(1100, 730)
         Me.Controls.Add(Me.FormSkin1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -666,7 +654,6 @@ Partial Class ClientsForm
     Friend WithEvents FlatButton1 As FlatButton
     Friend WithEvents FlatButton3 As FlatButton
     Friend WithEvents StationPlusDataSet As StationPlusDataSet
-    Friend WithEvents CLIENTSBindingSource As BindingSource
     Friend WithEvents CLIENTSTableAdapter As StationPlusDataSetTableAdapters.CLIENTSTableAdapter
     Friend WithEvents TableAdapterManager As StationPlusDataSetTableAdapters.TableAdapterManager
     Friend WithEvents CLIENTSDataGridView As DataGridView
@@ -687,18 +674,17 @@ Partial Class ClientsForm
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents FlatButton12 As FlatButton
     Friend WithEvents Label3 As Label
-    Friend WithEvents CLIENTIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CLIENTSBindingSource As BindingSource
+    Friend WithEvents CLIENT_IDTextBox As TextBox
+    Friend WithEvents CLIENT_FNTextBox1 As TextBox
+    Friend WithEvents CLIENT_LNTextBox1 As TextBox
+    Friend WithEvents MOBILETextBox1 As TextBox
+    Friend WithEvents CORP_MOBILETextBox1 As TextBox
+    Friend WithEvents WEBSITETextBox1 As TextBox
+    Friend WithEvents EMAILTextBox1 As TextBox
+    Friend WithEvents C_ADDRESSTextBox1 As TextBox
     Friend WithEvents CLIENTFNDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CLIENTLNDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents MOBILEDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents WEBSITEDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EMAILDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CLIENT_IDTextBox As TextBox
-    Friend WithEvents CLIENT_FNTextBox As TextBox
-    Friend WithEvents CLIENT_LNTextBox As TextBox
-    Friend WithEvents MOBILETextBox As TextBox
-    Friend WithEvents CORP_MOBILETextBox As TextBox
-    Friend WithEvents WEBSITETextBox As TextBox
-    Friend WithEvents C_ADDRESSTextBox As TextBox
-    Friend WithEvents EMAILTextBox As TextBox
 End Class

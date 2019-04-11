@@ -21,7 +21,7 @@ Public Class MainForm
         Dim query As String = "SELECT COUNT(CLIENT_ID) FROM CLIENTS"
         cmd = New SqlCommand(query, con)
         Try
-            con.open
+            con.Open()
             Dim myreader As SqlDataReader = cmd.ExecuteReader()
             If myreader.Read() Then
                 Label4.Text = myreader.GetValue(0) & " Clients"
@@ -135,6 +135,12 @@ Public Class MainForm
 
     Private Sub FlatButton4_Click(sender As Object, e As EventArgs) Handles FlatButton4.Click
         InventoryForm.Show()
+        Me.Hide()
+
+    End Sub
+
+    Private Sub FlatButton5_Click(sender As Object, e As EventArgs) Handles FlatButton5.Click
+        RewardsForm.Show()
         Me.Hide()
 
     End Sub
