@@ -58,7 +58,7 @@ Namespace My
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
          Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(local)\SQLExpress;Initial Catalog=StationPlus;Integrated Security=Tr"& _ 
-            "ue")>  _
+            "ue;MultipleActiveResultSets=True")>  _
         Public ReadOnly Property StationPlusConnectionString() As String
             Get
                 Return CType(Me("StationPlusConnectionString"),String)
