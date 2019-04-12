@@ -33,27 +33,27 @@ Partial Class LoyaltyForm
         Me.FlatButton4 = New StationPlus.FlatButton()
         Me.FlatButton2 = New StationPlus.FlatButton()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.CLIENTSComboBox = New System.Windows.Forms.ComboBox()
+        Me.CLIENTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.StationPlusDataSet = New StationPlus.StationPlusDataSet()
+        Me.FlatStatusBar1 = New StationPlus.FlatStatusBar()
+        Me.FlatButton3 = New StationPlus.FlatButton()
+        Me.FlatButton1 = New StationPlus.FlatButton()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.EMAILLabel1 = New System.Windows.Forms.Label()
-        Me.CLIENTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.StationPlusDataSet = New StationPlus.StationPlusDataSet()
         Me.CLIENT_IDLabel1 = New System.Windows.Forms.Label()
         Me.MOBILELabel1 = New System.Windows.Forms.Label()
         Me.CLIENT_FNLabel1 = New System.Windows.Forms.Label()
         Me.CLIENT_LNLabel1 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.CLIENTSComboBox = New System.Windows.Forms.ComboBox()
-        Me.FlatStatusBar1 = New StationPlus.FlatStatusBar()
-        Me.FlatButton3 = New StationPlus.FlatButton()
-        Me.FlatButton1 = New StationPlus.FlatButton()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.CLIENTSTableAdapter = New StationPlus.StationPlusDataSetTableAdapters.CLIENTSTableAdapter()
         Me.TableAdapterManager = New StationPlus.StationPlusDataSetTableAdapters.TableAdapterManager()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         CLIENT_IDLabel = New System.Windows.Forms.Label()
         CLIENT_FNLabel = New System.Windows.Forms.Label()
         CLIENT_LNLabel = New System.Windows.Forms.Label()
@@ -62,14 +62,14 @@ Partial Class LoyaltyForm
         Label2 = New System.Windows.Forms.Label()
         Me.FormSkin1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         CType(Me.CLIENTSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StationPlusDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CLIENT_IDLabel
@@ -204,36 +204,91 @@ Partial Class LoyaltyForm
         Me.DataGridView1.Size = New System.Drawing.Size(778, 150)
         Me.DataGridView1.TabIndex = 68
         '
-        'Panel2
+        'GroupBox1
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Controls.Add(Me.PictureBox2)
-        Me.Panel2.Location = New System.Drawing.Point(19, 7)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(778, 48)
-        Me.Panel2.TabIndex = 67
+        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox1.Controls.Add(Me.CLIENTSComboBox)
+        Me.GroupBox1.ForeColor = System.Drawing.Color.White
+        Me.GroupBox1.Location = New System.Drawing.Point(22, 64)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(778, 100)
+        Me.GroupBox1.TabIndex = 65
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Choose Your Customer"
         '
-        'Label1
+        'CLIENTSComboBox
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 16.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(240, 3)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(221, 38)
-        Me.Label1.TabIndex = 67
-        Me.Label1.Text = "LOYALTY CARD"
+        Me.CLIENTSComboBox.DataSource = Me.CLIENTSBindingSource
+        Me.CLIENTSComboBox.DisplayMember = "CLIENT_FN"
+        Me.CLIENTSComboBox.FormattingEnabled = True
+        Me.CLIENTSComboBox.Location = New System.Drawing.Point(8, 43)
+        Me.CLIENTSComboBox.Name = "CLIENTSComboBox"
+        Me.CLIENTSComboBox.Size = New System.Drawing.Size(763, 36)
+        Me.CLIENTSComboBox.TabIndex = 55
+        Me.CLIENTSComboBox.ValueMember = "CLIENT_ID"
         '
-        'PictureBox2
+        'CLIENTSBindingSource
         '
-        Me.PictureBox2.Image = Global.StationPlus.My.Resources.Resources.STATION__logo
-        Me.PictureBox2.Location = New System.Drawing.Point(0, -20)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(234, 68)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 66
-        Me.PictureBox2.TabStop = False
+        Me.CLIENTSBindingSource.DataMember = "CLIENTS"
+        Me.CLIENTSBindingSource.DataSource = Me.StationPlusDataSet
+        '
+        'StationPlusDataSet
+        '
+        Me.StationPlusDataSet.DataSetName = "StationPlusDataSet"
+        Me.StationPlusDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'FlatStatusBar1
+        '
+        Me.FlatStatusBar1.BaseColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.FlatStatusBar1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.FlatStatusBar1.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.FlatStatusBar1.ForeColor = System.Drawing.Color.White
+        Me.FlatStatusBar1.Location = New System.Drawing.Point(0, 639)
+        Me.FlatStatusBar1.Name = "FlatStatusBar1"
+        Me.FlatStatusBar1.RectColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.FlatStatusBar1.ShowTimeDate = False
+        Me.FlatStatusBar1.Size = New System.Drawing.Size(820, 23)
+        Me.FlatStatusBar1.TabIndex = 55
+        Me.FlatStatusBar1.Text = "FlatStatusBar1"
+        Me.FlatStatusBar1.TextColor = System.Drawing.Color.White
+        '
+        'FlatButton3
+        '
+        Me.FlatButton3.BackColor = System.Drawing.Color.Transparent
+        Me.FlatButton3.BaseColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.FlatButton3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FlatButton3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.FlatButton3.Location = New System.Drawing.Point(590, 10)
+        Me.FlatButton3.Name = "FlatButton3"
+        Me.FlatButton3.Rounded = False
+        Me.FlatButton3.Size = New System.Drawing.Size(153, 32)
+        Me.FlatButton3.TabIndex = 19
+        Me.FlatButton3.Text = "Back To Main"
+        Me.FlatButton3.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
+        '
+        'FlatButton1
+        '
+        Me.FlatButton1.BackColor = System.Drawing.Color.Transparent
+        Me.FlatButton1.BaseColor = System.Drawing.Color.Red
+        Me.FlatButton1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FlatButton1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.FlatButton1.Location = New System.Drawing.Point(774, 12)
+        Me.FlatButton1.Name = "FlatButton1"
+        Me.FlatButton1.Rounded = False
+        Me.FlatButton1.Size = New System.Drawing.Size(26, 26)
+        Me.FlatButton1.TabIndex = 18
+        Me.FlatButton1.Text = "x"
+        Me.FlatButton1.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(73, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.Panel1)
+        Me.Panel3.Controls.Add(Me.Panel2)
+        Me.Panel3.Location = New System.Drawing.Point(3, 161)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(814, 276)
+        Me.Panel3.TabIndex = 71
         '
         'Panel1
         '
@@ -288,16 +343,6 @@ Partial Class LoyaltyForm
         Me.EMAILLabel1.TabIndex = 64
         Me.EMAILLabel1.Text = "Label1"
         '
-        'CLIENTSBindingSource
-        '
-        Me.CLIENTSBindingSource.DataMember = "CLIENTS"
-        Me.CLIENTSBindingSource.DataSource = Me.StationPlusDataSet
-        '
-        'StationPlusDataSet
-        '
-        Me.StationPlusDataSet.DataSetName = "StationPlusDataSet"
-        Me.StationPlusDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'CLIENT_IDLabel1
         '
         Me.CLIENT_IDLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CLIENTSBindingSource, "CLIENT_ID", True))
@@ -338,71 +383,36 @@ Partial Class LoyaltyForm
         Me.CLIENT_LNLabel1.TabIndex = 60
         Me.CLIENT_LNLabel1.Text = "Label1"
         '
-        'GroupBox1
+        'Panel2
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox1.Controls.Add(Me.CLIENTSComboBox)
-        Me.GroupBox1.ForeColor = System.Drawing.Color.White
-        Me.GroupBox1.Location = New System.Drawing.Point(22, 64)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(778, 100)
-        Me.GroupBox1.TabIndex = 65
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Choose Your Customer"
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Controls.Add(Me.PictureBox2)
+        Me.Panel2.Location = New System.Drawing.Point(19, 7)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(778, 48)
+        Me.Panel2.TabIndex = 67
         '
-        'CLIENTSComboBox
+        'Label1
         '
-        Me.CLIENTSComboBox.DataSource = Me.CLIENTSBindingSource
-        Me.CLIENTSComboBox.DisplayMember = "CLIENT_FN"
-        Me.CLIENTSComboBox.FormattingEnabled = True
-        Me.CLIENTSComboBox.Location = New System.Drawing.Point(8, 43)
-        Me.CLIENTSComboBox.Name = "CLIENTSComboBox"
-        Me.CLIENTSComboBox.Size = New System.Drawing.Size(763, 36)
-        Me.CLIENTSComboBox.TabIndex = 55
-        Me.CLIENTSComboBox.ValueMember = "CLIENT_ID"
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 16.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(240, 3)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(221, 38)
+        Me.Label1.TabIndex = 67
+        Me.Label1.Text = "LOYALTY CARD"
         '
-        'FlatStatusBar1
+        'PictureBox2
         '
-        Me.FlatStatusBar1.BaseColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.FlatStatusBar1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.FlatStatusBar1.Font = New System.Drawing.Font("Segoe UI", 8.0!)
-        Me.FlatStatusBar1.ForeColor = System.Drawing.Color.White
-        Me.FlatStatusBar1.Location = New System.Drawing.Point(0, 639)
-        Me.FlatStatusBar1.Name = "FlatStatusBar1"
-        Me.FlatStatusBar1.RectColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.FlatStatusBar1.ShowTimeDate = False
-        Me.FlatStatusBar1.Size = New System.Drawing.Size(820, 23)
-        Me.FlatStatusBar1.TabIndex = 55
-        Me.FlatStatusBar1.Text = "FlatStatusBar1"
-        Me.FlatStatusBar1.TextColor = System.Drawing.Color.White
-        '
-        'FlatButton3
-        '
-        Me.FlatButton3.BackColor = System.Drawing.Color.Transparent
-        Me.FlatButton3.BaseColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.FlatButton3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.FlatButton3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.FlatButton3.Location = New System.Drawing.Point(589, 10)
-        Me.FlatButton3.Name = "FlatButton3"
-        Me.FlatButton3.Rounded = False
-        Me.FlatButton3.Size = New System.Drawing.Size(153, 32)
-        Me.FlatButton3.TabIndex = 19
-        Me.FlatButton3.Text = "Back To Main"
-        Me.FlatButton3.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
-        '
-        'FlatButton1
-        '
-        Me.FlatButton1.BackColor = System.Drawing.Color.Transparent
-        Me.FlatButton1.BaseColor = System.Drawing.Color.Red
-        Me.FlatButton1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.FlatButton1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.FlatButton1.Location = New System.Drawing.Point(774, 12)
-        Me.FlatButton1.Name = "FlatButton1"
-        Me.FlatButton1.Rounded = False
-        Me.FlatButton1.Size = New System.Drawing.Size(26, 26)
-        Me.FlatButton1.TabIndex = 18
-        Me.FlatButton1.Text = "x"
-        Me.FlatButton1.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
+        Me.PictureBox2.Image = Global.StationPlus.My.Resources.Resources.STATION__logo
+        Me.PictureBox2.Location = New System.Drawing.Point(0, -20)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(234, 68)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 66
+        Me.PictureBox2.TabStop = False
         '
         'CLIENTSTableAdapter
         '
@@ -418,16 +428,6 @@ Partial Class LoyaltyForm
         Me.TableAdapterManager.SPLUS_USERSTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = StationPlus.StationPlusDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(73, Byte), Integer))
-        Me.Panel3.Controls.Add(Me.Panel1)
-        Me.Panel3.Controls.Add(Me.Panel2)
-        Me.Panel3.Location = New System.Drawing.Point(3, 161)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(814, 276)
-        Me.Panel3.TabIndex = 71
-        '
         'LoyaltyForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -441,16 +441,16 @@ Partial Class LoyaltyForm
         Me.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.FormSkin1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        CType(Me.CLIENTSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StationPlusDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel3.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CLIENTSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.StationPlusDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
