@@ -50,6 +50,7 @@ Partial Class MainForm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.FlatStatusBar1 = New StationPlus.FlatStatusBar()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.FlatButton7 = New StationPlus.FlatButton()
         Me.FormSkin1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -65,6 +66,7 @@ Partial Class MainForm
         Me.FormSkin1.BackColor = System.Drawing.Color.White
         Me.FormSkin1.BaseColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(73, Byte), Integer))
         Me.FormSkin1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(53, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.FormSkin1.Controls.Add(Me.FlatButton7)
         Me.FormSkin1.Controls.Add(Me.Panel3)
         Me.FormSkin1.Controls.Add(Me.Panel2)
         Me.FormSkin1.Controls.Add(Me.FlatButton6)
@@ -88,7 +90,7 @@ Partial Class MainForm
         Me.FormSkin1.HeaderMaximize = False
         Me.FormSkin1.Location = New System.Drawing.Point(0, 0)
         Me.FormSkin1.Name = "FormSkin1"
-        Me.FormSkin1.Size = New System.Drawing.Size(791, 608)
+        Me.FormSkin1.Size = New System.Drawing.Size(791, 674)
         Me.FormSkin1.TabIndex = 0
         Me.FormSkin1.Text = "StationPlus - Main Page"
         '
@@ -101,7 +103,7 @@ Partial Class MainForm
         Me.Panel3.Controls.Add(Me.Label9)
         Me.Panel3.Controls.Add(Me.Label10)
         Me.Panel3.Controls.Add(Me.Label11)
-        Me.Panel3.Location = New System.Drawing.Point(398, 357)
+        Me.Panel3.Location = New System.Drawing.Point(398, 422)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(355, 183)
         Me.Panel3.TabIndex = 19
@@ -171,7 +173,7 @@ Partial Class MainForm
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Location = New System.Drawing.Point(30, 357)
+        Me.Panel2.Location = New System.Drawing.Point(30, 422)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(355, 183)
         Me.Panel2.TabIndex = 18
@@ -238,7 +240,7 @@ Partial Class MainForm
         Me.FlatButton6.BaseColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.FlatButton6.Cursor = System.Windows.Forms.Cursors.Hand
         Me.FlatButton6.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.FlatButton6.Location = New System.Drawing.Point(30, 546)
+        Me.FlatButton6.Location = New System.Drawing.Point(30, 611)
         Me.FlatButton6.Name = "FlatButton6"
         Me.FlatButton6.Rounded = False
         Me.FlatButton6.Size = New System.Drawing.Size(723, 32)
@@ -327,7 +329,7 @@ Partial Class MainForm
         Me.FlatButton2.BaseColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.FlatButton2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.FlatButton2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.FlatButton2.Location = New System.Drawing.Point(766, 587)
+        Me.FlatButton2.Location = New System.Drawing.Point(767, 650)
         Me.FlatButton2.Name = "FlatButton2"
         Me.FlatButton2.Rounded = False
         Me.FlatButton2.Size = New System.Drawing.Size(21, 21)
@@ -401,7 +403,7 @@ Partial Class MainForm
         Me.FlatStatusBar1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.FlatStatusBar1.Font = New System.Drawing.Font("Segoe UI", 8.0!)
         Me.FlatStatusBar1.ForeColor = System.Drawing.Color.White
-        Me.FlatStatusBar1.Location = New System.Drawing.Point(0, 585)
+        Me.FlatStatusBar1.Location = New System.Drawing.Point(0, 651)
         Me.FlatStatusBar1.Name = "FlatStatusBar1"
         Me.FlatStatusBar1.RectColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.FlatStatusBar1.ShowTimeDate = False
@@ -421,11 +423,25 @@ Partial Class MainForm
         Me.PictureBox3.TabIndex = 19
         Me.PictureBox3.TabStop = False
         '
+        'FlatButton7
+        '
+        Me.FlatButton7.BackColor = System.Drawing.Color.Transparent
+        Me.FlatButton7.BaseColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.FlatButton7.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FlatButton7.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FlatButton7.Location = New System.Drawing.Point(30, 357)
+        Me.FlatButton7.Name = "FlatButton7"
+        Me.FlatButton7.Rounded = False
+        Me.FlatButton7.Size = New System.Drawing.Size(723, 47)
+        Me.FlatButton7.TabIndex = 20
+        Me.FlatButton7.Text = "LOYALTY CARDS"
+        Me.FlatButton7.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(791, 608)
+        Me.ClientSize = New System.Drawing.Size(791, 674)
         Me.Controls.Add(Me.FormSkin1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "MainForm"
@@ -475,4 +491,5 @@ Partial Class MainForm
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
+    Friend WithEvents FlatButton7 As FlatButton
 End Class
