@@ -144,4 +144,9 @@ Public Class MainForm
         Me.Hide()
 
     End Sub
+
+    Private Sub FlatButton7_Click(sender As Object, e As EventArgs) Handles FlatButton7.Click
+        LoyaltyForm.Show()
+        Me.Hide()
+    End Sub
 End Class

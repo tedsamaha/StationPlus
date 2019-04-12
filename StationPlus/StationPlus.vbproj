@@ -112,6 +112,12 @@
     <Compile Include="InventoryForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="LoyaltyForm.Designer.vb">
+      <DependentUpon>LoyaltyForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoyaltyForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainForm.Designer.vb">
       <DependentUpon>MainForm.vb</DependentUpon>
     </Compile>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryForm.resx">
       <DependentUpon>InventoryForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoyaltyForm.resx">
+      <DependentUpon>LoyaltyForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>

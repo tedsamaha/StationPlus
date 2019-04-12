@@ -23,6 +23,7 @@ Partial Class MainForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.FormSkin1 = New StationPlus.FormSkin()
+        Me.FlatButton7 = New StationPlus.FlatButton()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -36,9 +37,6 @@ Partial Class MainForm
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.FlatButton6 = New StationPlus.FlatButton()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.FlatButton5 = New StationPlus.FlatButton()
         Me.FlatButton4 = New StationPlus.FlatButton()
         Me.FlatButton3 = New StationPlus.FlatButton()
@@ -49,15 +47,17 @@ Partial Class MainForm
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.FlatStatusBar1 = New StationPlus.FlatStatusBar()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.FlatButton7 = New StationPlus.FlatButton()
         Me.FormSkin1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -93,6 +93,20 @@ Partial Class MainForm
         Me.FormSkin1.Size = New System.Drawing.Size(791, 674)
         Me.FormSkin1.TabIndex = 0
         Me.FormSkin1.Text = "StationPlus - Main Page"
+        '
+        'FlatButton7
+        '
+        Me.FlatButton7.BackColor = System.Drawing.Color.Transparent
+        Me.FlatButton7.BaseColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.FlatButton7.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FlatButton7.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FlatButton7.Location = New System.Drawing.Point(30, 357)
+        Me.FlatButton7.Name = "FlatButton7"
+        Me.FlatButton7.Rounded = False
+        Me.FlatButton7.Size = New System.Drawing.Size(723, 47)
+        Me.FlatButton7.TabIndex = 20
+        Me.FlatButton7.Text = "LOYALTY CARDS"
+        Me.FlatButton7.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
         '
         'Panel3
         '
@@ -248,39 +262,6 @@ Partial Class MainForm
         Me.FlatButton6.Text = "Run Custom Queries"
         Me.FlatButton6.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
         '
-        'PictureBox6
-        '
-        Me.PictureBox6.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox6.Image = Global.StationPlus.My.Resources.Resources.storage
-        Me.PictureBox6.Location = New System.Drawing.Point(304, 129)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(180, 152)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox6.TabIndex = 16
-        Me.PictureBox6.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox4.Image = Global.StationPlus.My.Resources.Resources.briefing
-        Me.PictureBox4.Location = New System.Drawing.Point(553, 129)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(180, 153)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox4.TabIndex = 15
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Image = Global.StationPlus.My.Resources.Resources.avatar
-        Me.PictureBox2.Location = New System.Drawing.Point(61, 131)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(182, 153)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 14
-        Me.PictureBox2.TabStop = False
-        '
         'FlatButton5
         '
         Me.FlatButton5.BackColor = System.Drawing.Color.Transparent
@@ -329,7 +310,7 @@ Partial Class MainForm
         Me.FlatButton2.BaseColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.FlatButton2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.FlatButton2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.FlatButton2.Location = New System.Drawing.Point(767, 650)
+        Me.FlatButton2.Location = New System.Drawing.Point(767, 653)
         Me.FlatButton2.Name = "FlatButton2"
         Me.FlatButton2.Rounded = False
         Me.FlatButton2.Size = New System.Drawing.Size(21, 21)
@@ -412,6 +393,39 @@ Partial Class MainForm
         Me.FlatStatusBar1.Text = "FlatStatusBar1"
         Me.FlatStatusBar1.TextColor = System.Drawing.Color.White
         '
+        'PictureBox6
+        '
+        Me.PictureBox6.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox6.Image = Global.StationPlus.My.Resources.Resources.storage
+        Me.PictureBox6.Location = New System.Drawing.Point(304, 129)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(180, 152)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox6.TabIndex = 16
+        Me.PictureBox6.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox4.Image = Global.StationPlus.My.Resources.Resources.briefing
+        Me.PictureBox4.Location = New System.Drawing.Point(553, 129)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(180, 153)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox4.TabIndex = 15
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = Global.StationPlus.My.Resources.Resources.avatar
+        Me.PictureBox2.Location = New System.Drawing.Point(61, 131)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(182, 153)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 14
+        Me.PictureBox2.TabStop = False
+        '
         'PictureBox3
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
@@ -422,20 +436,6 @@ Partial Class MainForm
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox3.TabIndex = 19
         Me.PictureBox3.TabStop = False
-        '
-        'FlatButton7
-        '
-        Me.FlatButton7.BackColor = System.Drawing.Color.Transparent
-        Me.FlatButton7.BaseColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.FlatButton7.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.FlatButton7.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FlatButton7.Location = New System.Drawing.Point(30, 357)
-        Me.FlatButton7.Name = "FlatButton7"
-        Me.FlatButton7.Rounded = False
-        Me.FlatButton7.Size = New System.Drawing.Size(723, 47)
-        Me.FlatButton7.TabIndex = 20
-        Me.FlatButton7.Text = "LOYALTY CARDS"
-        Me.FlatButton7.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
         '
         'MainForm
         '
@@ -453,11 +453,11 @@ Partial Class MainForm
         Me.Panel3.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

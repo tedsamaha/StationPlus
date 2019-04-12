@@ -87,4 +87,8 @@
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
+
+    Private Sub REWARD_IDLabel1_Click(sender As Object, e As EventArgs) Handles REWARD_IDLabel1.Click
+
+    End Sub
 End Class
