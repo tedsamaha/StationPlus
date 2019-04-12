@@ -2,6 +2,7 @@
 Imports System.Data.Sql
 Imports System.Data.SqlTypes
 Imports System.Configuration
+Imports System.Drawing.Imaging
 Public Class LoyaltyForm
     Private Sub FlatButton3_Click(sender As Object, e As EventArgs) Handles FlatButton3.Click
         MainForm.Show()
@@ -102,5 +103,22 @@ AND CLIENTS.CLIENT_ID = @VALUE"
         adapter.Fill(table)
 
         DataGridView1.DataSource = table
+    End Sub
+
+    Private Sub FlatButton4_Click(sender As Object, e As EventArgs) Handles FlatButton4.Click
+
+        Dim frm = Form.ActiveForm
+        Try
+            Using bm As New Bitmap(Panel3.Width, Panel3.Height, Imaging.PixelFormat.Format24bppRgb)
+
+                Panel3.DrawToBitmap(bm, New Rectangle(0, 0, bm.Width, bm.Height))
+
+                bm.Save("C:\Users\Ted\Desktop\loyalty.jpg", Imaging.ImageFormat.Jpeg)
+
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        MsgBox("Export Sucessfull (C:\Users\Ted\Desktop\loyalty.jpg)")
     End Sub
 End Class

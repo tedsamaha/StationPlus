@@ -30,6 +30,7 @@ Partial Class LoyaltyForm
         Dim EMAILLabel As System.Windows.Forms.Label
         Dim Label2 As System.Windows.Forms.Label
         Me.FormSkin1 = New StationPlus.FormSkin()
+        Me.FlatButton4 = New StationPlus.FlatButton()
         Me.FlatButton2 = New StationPlus.FlatButton()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -52,6 +53,7 @@ Partial Class LoyaltyForm
         Me.FlatButton1 = New StationPlus.FlatButton()
         Me.CLIENTSTableAdapter = New StationPlus.StationPlusDataSetTableAdapters.CLIENTSTableAdapter()
         Me.TableAdapterManager = New StationPlus.StationPlusDataSetTableAdapters.TableAdapterManager()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         CLIENT_IDLabel = New System.Windows.Forms.Label()
         CLIENT_FNLabel = New System.Windows.Forms.Label()
         CLIENT_LNLabel = New System.Windows.Forms.Label()
@@ -67,6 +69,7 @@ Partial Class LoyaltyForm
         CType(Me.CLIENTSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StationPlusDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'CLIENT_IDLabel
@@ -140,14 +143,14 @@ Partial Class LoyaltyForm
         Me.FormSkin1.BackColor = System.Drawing.Color.White
         Me.FormSkin1.BaseColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(73, Byte), Integer))
         Me.FormSkin1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(53, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.FormSkin1.Controls.Add(Me.FlatButton4)
         Me.FormSkin1.Controls.Add(Me.FlatButton2)
         Me.FormSkin1.Controls.Add(Me.DataGridView1)
-        Me.FormSkin1.Controls.Add(Me.Panel2)
-        Me.FormSkin1.Controls.Add(Me.Panel1)
         Me.FormSkin1.Controls.Add(Me.GroupBox1)
         Me.FormSkin1.Controls.Add(Me.FlatStatusBar1)
         Me.FormSkin1.Controls.Add(Me.FlatButton3)
         Me.FormSkin1.Controls.Add(Me.FlatButton1)
+        Me.FormSkin1.Controls.Add(Me.Panel3)
         Me.FormSkin1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FormSkin1.FlatColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.FormSkin1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
@@ -159,6 +162,20 @@ Partial Class LoyaltyForm
         Me.FormSkin1.TabIndex = 0
         Me.FormSkin1.Text = "Station Plus - Loyalty Program"
         '
+        'FlatButton4
+        '
+        Me.FlatButton4.BackColor = System.Drawing.Color.Transparent
+        Me.FlatButton4.BaseColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.FlatButton4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FlatButton4.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.FlatButton4.Location = New System.Drawing.Point(414, 442)
+        Me.FlatButton4.Name = "FlatButton4"
+        Me.FlatButton4.Rounded = False
+        Me.FlatButton4.Size = New System.Drawing.Size(386, 32)
+        Me.FlatButton4.TabIndex = 70
+        Me.FlatButton4.Text = "Export Loyalty Card"
+        Me.FlatButton4.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
+        '
         'FlatButton2
         '
         Me.FlatButton2.BackColor = System.Drawing.Color.Transparent
@@ -168,7 +185,7 @@ Partial Class LoyaltyForm
         Me.FlatButton2.Location = New System.Drawing.Point(22, 442)
         Me.FlatButton2.Name = "FlatButton2"
         Me.FlatButton2.Rounded = False
-        Me.FlatButton2.Size = New System.Drawing.Size(778, 32)
+        Me.FlatButton2.Size = New System.Drawing.Size(386, 32)
         Me.FlatButton2.TabIndex = 69
         Me.FlatButton2.Text = "Show Available Rewards"
         Me.FlatButton2.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
@@ -192,7 +209,7 @@ Partial Class LoyaltyForm
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.PictureBox2)
-        Me.Panel2.Location = New System.Drawing.Point(22, 170)
+        Me.Panel2.Location = New System.Drawing.Point(19, 7)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(778, 48)
         Me.Panel2.TabIndex = 67
@@ -234,7 +251,7 @@ Partial Class LoyaltyForm
         Me.Panel1.Controls.Add(Me.CLIENT_FNLabel1)
         Me.Panel1.Controls.Add(Me.CLIENT_LNLabel1)
         Me.Panel1.Controls.Add(CLIENT_LNLabel)
-        Me.Panel1.Location = New System.Drawing.Point(22, 224)
+        Me.Panel1.Location = New System.Drawing.Point(19, 61)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(778, 212)
         Me.Panel1.TabIndex = 66
@@ -401,6 +418,16 @@ Partial Class LoyaltyForm
         Me.TableAdapterManager.SPLUS_USERSTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = StationPlus.StationPlusDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(73, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.Panel1)
+        Me.Panel3.Controls.Add(Me.Panel2)
+        Me.Panel3.Location = New System.Drawing.Point(3, 161)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(814, 276)
+        Me.Panel3.TabIndex = 71
+        '
         'LoyaltyForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -423,6 +450,7 @@ Partial Class LoyaltyForm
         CType(Me.CLIENTSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StationPlusDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -450,4 +478,6 @@ Partial Class LoyaltyForm
     Friend WithEvents Label4 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents FlatButton2 As FlatButton
+    Friend WithEvents FlatButton4 As FlatButton
+    Friend WithEvents Panel3 As Panel
 End Class
