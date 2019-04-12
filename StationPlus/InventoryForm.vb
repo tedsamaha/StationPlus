@@ -228,4 +228,12 @@ Public Class InventoryForm
     Private Sub FlatButton16_Click(sender As Object, e As EventArgs) Handles FlatButton16.Click
         INVENTORYDataGridView.Sort(INVENTORYDataGridView.Columns(1), System.ComponentModel.ListSortDirection.Descending)
     End Sub
+
+    Private Sub FlatStatusBar1_Click(sender As Object, e As EventArgs) Handles FlatStatusBar1.Click
+
+    End Sub
+
+    Private Sub FormSkin1_Click(sender As Object, e As EventArgs) Handles FormSkin1.Click
+
+    End Sub
 End Class
