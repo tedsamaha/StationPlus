@@ -62,14 +62,14 @@ Partial Class ClientsForm
         Me.FlatButton6 = New StationPlus.FlatButton()
         Me.FlatStatusBar2 = New StationPlus.FlatStatusBar()
         Me.CLIENTSDataGridView = New System.Windows.Forms.DataGridView()
-        Me.FlatButton3 = New StationPlus.FlatButton()
-        Me.FlatButton1 = New StationPlus.FlatButton()
-        Me.FlatButton2 = New StationPlus.FlatButton()
-        Me.FlatStatusBar1 = New StationPlus.FlatStatusBar()
         Me.CLIENTFNDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CLIENTLNDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MOBILEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EMAILDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FlatButton3 = New StationPlus.FlatButton()
+        Me.FlatButton1 = New StationPlus.FlatButton()
+        Me.FlatButton2 = New StationPlus.FlatButton()
+        Me.FlatStatusBar1 = New StationPlus.FlatStatusBar()
         CLIENT_IDLabel = New System.Windows.Forms.Label()
         CLIENT_FNLabel = New System.Windows.Forms.Label()
         CLIENT_LNLabel = New System.Windows.Forms.Label()
@@ -539,6 +539,34 @@ Partial Class ClientsForm
         Me.CLIENTSDataGridView.Size = New System.Drawing.Size(746, 367)
         Me.CLIENTSDataGridView.TabIndex = 32
         '
+        'CLIENTFNDataGridViewTextBoxColumn
+        '
+        Me.CLIENTFNDataGridViewTextBoxColumn.DataPropertyName = "CLIENT_FN"
+        Me.CLIENTFNDataGridViewTextBoxColumn.HeaderText = "NAME"
+        Me.CLIENTFNDataGridViewTextBoxColumn.Name = "CLIENTFNDataGridViewTextBoxColumn"
+        Me.CLIENTFNDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CLIENTLNDataGridViewTextBoxColumn
+        '
+        Me.CLIENTLNDataGridViewTextBoxColumn.DataPropertyName = "CLIENT_LN"
+        Me.CLIENTLNDataGridViewTextBoxColumn.HeaderText = "LAST NAME"
+        Me.CLIENTLNDataGridViewTextBoxColumn.Name = "CLIENTLNDataGridViewTextBoxColumn"
+        Me.CLIENTLNDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'MOBILEDataGridViewTextBoxColumn
+        '
+        Me.MOBILEDataGridViewTextBoxColumn.DataPropertyName = "MOBILE"
+        Me.MOBILEDataGridViewTextBoxColumn.HeaderText = "MOBILE"
+        Me.MOBILEDataGridViewTextBoxColumn.Name = "MOBILEDataGridViewTextBoxColumn"
+        Me.MOBILEDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'EMAILDataGridViewTextBoxColumn
+        '
+        Me.EMAILDataGridViewTextBoxColumn.DataPropertyName = "EMAIL"
+        Me.EMAILDataGridViewTextBoxColumn.HeaderText = "EMAIL"
+        Me.EMAILDataGridViewTextBoxColumn.Name = "EMAILDataGridViewTextBoxColumn"
+        Me.EMAILDataGridViewTextBoxColumn.ReadOnly = True
+        '
         'FlatButton3
         '
         Me.FlatButton3.BackColor = System.Drawing.Color.Transparent
@@ -595,34 +623,6 @@ Partial Class ClientsForm
         Me.FlatStatusBar1.TabIndex = 13
         Me.FlatStatusBar1.Text = "FlatStatusBar1"
         Me.FlatStatusBar1.TextColor = System.Drawing.Color.White
-        '
-        'CLIENTFNDataGridViewTextBoxColumn
-        '
-        Me.CLIENTFNDataGridViewTextBoxColumn.DataPropertyName = "CLIENT_FN"
-        Me.CLIENTFNDataGridViewTextBoxColumn.HeaderText = "NAME"
-        Me.CLIENTFNDataGridViewTextBoxColumn.Name = "CLIENTFNDataGridViewTextBoxColumn"
-        Me.CLIENTFNDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CLIENTLNDataGridViewTextBoxColumn
-        '
-        Me.CLIENTLNDataGridViewTextBoxColumn.DataPropertyName = "CLIENT_LN"
-        Me.CLIENTLNDataGridViewTextBoxColumn.HeaderText = "LAST NAME"
-        Me.CLIENTLNDataGridViewTextBoxColumn.Name = "CLIENTLNDataGridViewTextBoxColumn"
-        Me.CLIENTLNDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'MOBILEDataGridViewTextBoxColumn
-        '
-        Me.MOBILEDataGridViewTextBoxColumn.DataPropertyName = "MOBILE"
-        Me.MOBILEDataGridViewTextBoxColumn.HeaderText = "MOBILE"
-        Me.MOBILEDataGridViewTextBoxColumn.Name = "MOBILEDataGridViewTextBoxColumn"
-        Me.MOBILEDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'EMAILDataGridViewTextBoxColumn
-        '
-        Me.EMAILDataGridViewTextBoxColumn.DataPropertyName = "EMAIL"
-        Me.EMAILDataGridViewTextBoxColumn.HeaderText = "EMAIL"
-        Me.EMAILDataGridViewTextBoxColumn.Name = "EMAILDataGridViewTextBoxColumn"
-        Me.EMAILDataGridViewTextBoxColumn.ReadOnly = True
         '
         'ClientsForm
         '

@@ -29,6 +29,7 @@ Partial Class InventoryForm
         Dim UNIT_PRICELabel As System.Windows.Forms.Label
         Dim INITIAL_STOCKLabel As System.Windows.Forms.Label
         Dim CURRENT_STOCKLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(InventoryForm))
         Me.FormSkin1 = New StationPlus.FormSkin()
         Me.ITEM_IDLabel2 = New System.Windows.Forms.Label()
         Me.INVENTORYBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -778,6 +779,7 @@ Partial Class InventoryForm
         Me.ClientSize = New System.Drawing.Size(1110, 1012)
         Me.Controls.Add(Me.FormSkin1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "InventoryForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "StationPlus - Inventory"

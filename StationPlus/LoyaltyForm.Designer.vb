@@ -29,6 +29,7 @@ Partial Class LoyaltyForm
         Dim MOBILELabel As System.Windows.Forms.Label
         Dim EMAILLabel As System.Windows.Forms.Label
         Dim Label2 As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoyaltyForm))
         Me.FormSkin1 = New StationPlus.FormSkin()
         Me.FlatButton4 = New StationPlus.FlatButton()
         Me.FlatButton2 = New StationPlus.FlatButton()
@@ -435,6 +436,7 @@ Partial Class LoyaltyForm
         Me.ClientSize = New System.Drawing.Size(820, 662)
         Me.Controls.Add(Me.FormSkin1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "LoyaltyForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Station Plus - Loyalty Program"

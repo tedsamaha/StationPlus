@@ -27,6 +27,7 @@ Partial Class RewardsForm
         Dim REWARD_NAMELabel As System.Windows.Forms.Label
         Dim REWARD_DESCRIPTIONLabel As System.Windows.Forms.Label
         Dim POINTS_REQLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RewardsForm))
         Me.StationPlusDataSet = New StationPlus.StationPlusDataSet()
         Me.REWARDSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.REWARDSTableAdapter = New StationPlus.StationPlusDataSetTableAdapters.REWARDSTableAdapter()
@@ -60,6 +61,50 @@ Partial Class RewardsForm
         Me.FormSkin1.SuspendLayout()
         CType(Me.REWARDSDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'REWARD_IDLabel
+        '
+        REWARD_IDLabel.AutoSize = True
+        REWARD_IDLabel.BackColor = System.Drawing.Color.Transparent
+        REWARD_IDLabel.ForeColor = System.Drawing.Color.White
+        REWARD_IDLabel.Location = New System.Drawing.Point(17, 100)
+        REWARD_IDLabel.Name = "REWARD_IDLabel"
+        REWARD_IDLabel.Size = New System.Drawing.Size(119, 28)
+        REWARD_IDLabel.TabIndex = 17
+        REWARD_IDLabel.Text = "REWARD ID:"
+        '
+        'REWARD_NAMELabel
+        '
+        REWARD_NAMELabel.AutoSize = True
+        REWARD_NAMELabel.BackColor = System.Drawing.Color.Transparent
+        REWARD_NAMELabel.ForeColor = System.Drawing.Color.White
+        REWARD_NAMELabel.Location = New System.Drawing.Point(17, 134)
+        REWARD_NAMELabel.Name = "REWARD_NAMELabel"
+        REWARD_NAMELabel.Size = New System.Drawing.Size(156, 28)
+        REWARD_NAMELabel.TabIndex = 19
+        REWARD_NAMELabel.Text = "REWARD NAME:"
+        '
+        'REWARD_DESCRIPTIONLabel
+        '
+        REWARD_DESCRIPTIONLabel.AutoSize = True
+        REWARD_DESCRIPTIONLabel.BackColor = System.Drawing.Color.Transparent
+        REWARD_DESCRIPTIONLabel.ForeColor = System.Drawing.Color.White
+        REWARD_DESCRIPTIONLabel.Location = New System.Drawing.Point(17, 174)
+        REWARD_DESCRIPTIONLabel.Name = "REWARD_DESCRIPTIONLabel"
+        REWARD_DESCRIPTIONLabel.Size = New System.Drawing.Size(220, 28)
+        REWARD_DESCRIPTIONLabel.TabIndex = 21
+        REWARD_DESCRIPTIONLabel.Text = "REWARD DESCRIPTION:"
+        '
+        'POINTS_REQLabel
+        '
+        POINTS_REQLabel.AutoSize = True
+        POINTS_REQLabel.BackColor = System.Drawing.Color.Transparent
+        POINTS_REQLabel.ForeColor = System.Drawing.Color.White
+        POINTS_REQLabel.Location = New System.Drawing.Point(17, 214)
+        POINTS_REQLabel.Name = "POINTS_REQLabel"
+        POINTS_REQLabel.Size = New System.Drawing.Size(180, 28)
+        POINTS_REQLabel.TabIndex = 23
+        POINTS_REQLabel.Text = "POINTS REQUIRED:"
         '
         'StationPlusDataSet
         '
@@ -178,17 +223,6 @@ Partial Class RewardsForm
         Me.FlatButton8.Text = ">"
         Me.FlatButton8.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
         '
-        'REWARD_IDLabel
-        '
-        REWARD_IDLabel.AutoSize = True
-        REWARD_IDLabel.BackColor = System.Drawing.Color.Transparent
-        REWARD_IDLabel.ForeColor = System.Drawing.Color.White
-        REWARD_IDLabel.Location = New System.Drawing.Point(17, 100)
-        REWARD_IDLabel.Name = "REWARD_IDLabel"
-        REWARD_IDLabel.Size = New System.Drawing.Size(119, 28)
-        REWARD_IDLabel.TabIndex = 17
-        REWARD_IDLabel.Text = "REWARD ID:"
-        '
         'FlatButton7
         '
         Me.FlatButton7.BackColor = System.Drawing.Color.Transparent
@@ -226,17 +260,6 @@ Partial Class RewardsForm
         Me.FlatButton9.TabIndex = 38
         Me.FlatButton9.Text = "First"
         Me.FlatButton9.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
-        '
-        'REWARD_NAMELabel
-        '
-        REWARD_NAMELabel.AutoSize = True
-        REWARD_NAMELabel.BackColor = System.Drawing.Color.Transparent
-        REWARD_NAMELabel.ForeColor = System.Drawing.Color.White
-        REWARD_NAMELabel.Location = New System.Drawing.Point(17, 134)
-        REWARD_NAMELabel.Name = "REWARD_NAMELabel"
-        REWARD_NAMELabel.Size = New System.Drawing.Size(156, 28)
-        REWARD_NAMELabel.TabIndex = 19
-        REWARD_NAMELabel.Text = "REWARD NAME:"
         '
         'FlatButton4
         '
@@ -288,17 +311,6 @@ Partial Class RewardsForm
         Me.FlatButton6.Text = "Delete"
         Me.FlatButton6.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
         '
-        'REWARD_DESCRIPTIONLabel
-        '
-        REWARD_DESCRIPTIONLabel.AutoSize = True
-        REWARD_DESCRIPTIONLabel.BackColor = System.Drawing.Color.Transparent
-        REWARD_DESCRIPTIONLabel.ForeColor = System.Drawing.Color.White
-        REWARD_DESCRIPTIONLabel.Location = New System.Drawing.Point(17, 174)
-        REWARD_DESCRIPTIONLabel.Name = "REWARD_DESCRIPTIONLabel"
-        REWARD_DESCRIPTIONLabel.Size = New System.Drawing.Size(220, 28)
-        REWARD_DESCRIPTIONLabel.TabIndex = 21
-        REWARD_DESCRIPTIONLabel.Text = "REWARD DESCRIPTION:"
-        '
         'REWARD_DESCRIPTIONTextBox
         '
         Me.REWARD_DESCRIPTIONTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.REWARDSBindingSource, "REWARD_DESCRIPTION", True))
@@ -306,17 +318,6 @@ Partial Class RewardsForm
         Me.REWARD_DESCRIPTIONTextBox.Name = "REWARD_DESCRIPTIONTextBox"
         Me.REWARD_DESCRIPTIONTextBox.Size = New System.Drawing.Size(310, 34)
         Me.REWARD_DESCRIPTIONTextBox.TabIndex = 22
-        '
-        'POINTS_REQLabel
-        '
-        POINTS_REQLabel.AutoSize = True
-        POINTS_REQLabel.BackColor = System.Drawing.Color.Transparent
-        POINTS_REQLabel.ForeColor = System.Drawing.Color.White
-        POINTS_REQLabel.Location = New System.Drawing.Point(17, 214)
-        POINTS_REQLabel.Name = "POINTS_REQLabel"
-        POINTS_REQLabel.Size = New System.Drawing.Size(180, 28)
-        POINTS_REQLabel.TabIndex = 23
-        POINTS_REQLabel.Text = "POINTS REQUIRED:"
         '
         'POINTS_REQTextBox
         '
@@ -398,6 +399,7 @@ Partial Class RewardsForm
         Me.ClientSize = New System.Drawing.Size(866, 501)
         Me.Controls.Add(Me.FormSkin1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "RewardsForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Station Plus - Rewards"

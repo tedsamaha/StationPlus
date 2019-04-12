@@ -24,6 +24,7 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Dim USERPASSLabel As System.Windows.Forms.Label
         Dim USERNAMELabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.FormSkin1 = New StationPlus.FormSkin()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.FlatClose1 = New StationPlus.FlatClose()
@@ -161,9 +162,10 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(642, 413)
         Me.Controls.Add(Me.FormSkin1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
+        Me.Text = "StationPlus - Login"
         Me.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.FormSkin1.ResumeLayout(False)
         Me.FormSkin1.PerformLayout()
