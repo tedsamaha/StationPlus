@@ -83,6 +83,36 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property buy() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("buy", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property card() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("card", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property fuel_station() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("fuel-station", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property main_bg() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("main bg", resourceCulture)
@@ -96,6 +126,16 @@ Namespace My.Resources
         Friend ReadOnly Property main_bg_v2() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("main bg v2", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property SPLUS_ICON() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("SPLUS ICON", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

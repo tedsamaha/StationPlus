@@ -151,6 +151,12 @@
     <Compile Include="RewardsForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SalesForm.Designer.vb">
+      <DependentUpon>SalesForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SalesForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="StationPlusDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -194,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RewardsForm.resx">
       <DependentUpon>RewardsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesForm.resx">
+      <DependentUpon>SalesForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -242,6 +251,10 @@
     <None Include="Resources\main bg v2.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\card.png" />
+    <None Include="Resources\fuel-station.png" />
+    <None Include="Resources\buy.png" />
+    <None Include="Resources\SPLUS ICON.png" />
     <Content Include="splus_icon_0fm_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

@@ -78,6 +78,7 @@ Partial Class administrator
         'SPLUS_USERSDataGridView
         '
         Me.SPLUS_USERSDataGridView.AutoGenerateColumns = False
+        Me.SPLUS_USERSDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.SPLUS_USERSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.SPLUS_USERSDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.SPLUS_USERSDataGridView.DataSource = Me.SPLUS_USERSBindingSource

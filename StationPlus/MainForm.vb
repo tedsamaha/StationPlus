@@ -149,4 +149,26 @@ Public Class MainForm
         LoyaltyForm.Show()
         Me.Hide()
     End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub FlatButton10_Click(sender As Object, e As EventArgs) Handles FlatButton10.Click
+        Me.Close()
+        Form1.Show()
+        Form1.USERNAMETextBox.Text = ""
+        Form1.USERPASSTextBox.Text = ""
+
+    End Sub
+
+    Private Sub FlatButton8_Click(sender As Object, e As EventArgs) Handles FlatButton8.Click
+        SalesForm.Show()
+        Me.Hide()
+
+    End Sub
+
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+
+    End Sub
 End Class
