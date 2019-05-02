@@ -310,4 +310,10 @@ Public Class SalesForm
         End If
 
     End Sub
+
+    Private Sub FlatButton14_Click(sender As Object, e As EventArgs) Handles FlatButton14.Click
+        MainForm.Show()
+        Me.Close()
+
+    End Sub
 End Class

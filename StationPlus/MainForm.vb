@@ -171,4 +171,10 @@ Public Class MainForm
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
 
     End Sub
+
+    Private Sub FlatButton9_Click(sender As Object, e As EventArgs) Handles FlatButton9.Click
+        InquireForm.Show()
+        Me.Hide()
+
+    End Sub
 End Class

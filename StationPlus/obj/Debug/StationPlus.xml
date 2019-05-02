@@ -82,6 +82,11 @@ StationPlus
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:StationPlus.My.Resources.Resources.search">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:StationPlus.My.Resources.Resources.SPLUS_ICON">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

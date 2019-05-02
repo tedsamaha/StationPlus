@@ -292,6 +292,7 @@ Partial Class InventoryForm
         Me.INVENTORYDataGridView1.AllowUserToDeleteRows = False
         Me.INVENTORYDataGridView1.AllowUserToOrderColumns = True
         Me.INVENTORYDataGridView1.AutoGenerateColumns = False
+        Me.INVENTORYDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.INVENTORYDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.INVENTORYDataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12})
         Me.INVENTORYDataGridView1.DataSource = Me.INVENTORYBindingSource

@@ -112,6 +112,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="InquireForm.Designer.vb">
+      <DependentUpon>InquireForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InquireForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="InventoryForm.Designer.vb">
       <DependentUpon>InventoryForm.vb</DependentUpon>
     </Compile>
@@ -182,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InquireForm.resx">
+      <DependentUpon>InquireForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryForm.resx">
       <DependentUpon>InventoryForm.vb</DependentUpon>
@@ -255,6 +264,7 @@
     <None Include="Resources\fuel-station.png" />
     <None Include="Resources\buy.png" />
     <None Include="Resources\SPLUS ICON.png" />
+    <None Include="Resources\search.png" />
     <Content Include="splus_icon_0fm_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

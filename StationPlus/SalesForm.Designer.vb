@@ -23,6 +23,7 @@ Partial Class SalesForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SalesForm))
         Me.INVENTORYBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.StationPlusDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.StationPlusDataSet = New StationPlus.StationPlusDataSet()
@@ -30,6 +31,7 @@ Partial Class SalesForm
         Me.CLIENTSTableAdapter = New StationPlus.StationPlusDataSetTableAdapters.CLIENTSTableAdapter()
         Me.INVENTORYTableAdapter = New StationPlus.StationPlusDataSetTableAdapters.INVENTORYTableAdapter()
         Me.FormSkin1 = New StationPlus.FormSkin()
+        Me.FlatButton14 = New StationPlus.FlatButton()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.FlatButton7 = New StationPlus.FlatButton()
         Me.FlatButton9 = New StationPlus.FlatButton()
@@ -37,6 +39,7 @@ Partial Class SalesForm
         Me.FlatButton8 = New StationPlus.FlatButton()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.FlatButton13 = New StationPlus.FlatButton()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -72,7 +75,6 @@ Partial Class SalesForm
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.FlatButton1 = New StationPlus.FlatButton()
         Me.FlatStatusBar1 = New StationPlus.FlatStatusBar()
-        Me.FlatButton13 = New StationPlus.FlatButton()
         CType(Me.INVENTORYBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StationPlusDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StationPlusDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -121,6 +123,7 @@ Partial Class SalesForm
         Me.FormSkin1.BackColor = System.Drawing.Color.White
         Me.FormSkin1.BaseColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(73, Byte), Integer))
         Me.FormSkin1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(53, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.FormSkin1.Controls.Add(Me.FlatButton14)
         Me.FormSkin1.Controls.Add(Me.Panel6)
         Me.FormSkin1.Controls.Add(Me.Panel5)
         Me.FormSkin1.Controls.Add(Me.FlatButton6)
@@ -140,6 +143,20 @@ Partial Class SalesForm
         Me.FormSkin1.Size = New System.Drawing.Size(652, 887)
         Me.FormSkin1.TabIndex = 0
         Me.FormSkin1.Text = "StationPlus - Sale"
+        '
+        'FlatButton14
+        '
+        Me.FlatButton14.BackColor = System.Drawing.Color.Transparent
+        Me.FlatButton14.BaseColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.FlatButton14.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FlatButton14.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.FlatButton14.Location = New System.Drawing.Point(434, 8)
+        Me.FlatButton14.Name = "FlatButton14"
+        Me.FlatButton14.Rounded = False
+        Me.FlatButton14.Size = New System.Drawing.Size(153, 32)
+        Me.FlatButton14.TabIndex = 30
+        Me.FlatButton14.Text = "Back To Main"
+        Me.FlatButton14.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
         '
         'Panel6
         '
@@ -227,6 +244,20 @@ Partial Class SalesForm
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(628, 104)
         Me.Panel5.TabIndex = 20
+        '
+        'FlatButton13
+        '
+        Me.FlatButton13.BackColor = System.Drawing.Color.Transparent
+        Me.FlatButton13.BaseColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.FlatButton13.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FlatButton13.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.FlatButton13.Location = New System.Drawing.Point(438, 67)
+        Me.FlatButton13.Name = "FlatButton13"
+        Me.FlatButton13.Rounded = False
+        Me.FlatButton13.Size = New System.Drawing.Size(177, 32)
+        Me.FlatButton13.TabIndex = 3
+        Me.FlatButton13.Text = "Confirm Payment"
+        Me.FlatButton13.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
         '
         'Label11
         '
@@ -627,20 +658,6 @@ Partial Class SalesForm
         Me.FlatStatusBar1.Text = "FlatStatusBar1"
         Me.FlatStatusBar1.TextColor = System.Drawing.Color.White
         '
-        'FlatButton13
-        '
-        Me.FlatButton13.BackColor = System.Drawing.Color.Transparent
-        Me.FlatButton13.BaseColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.FlatButton13.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.FlatButton13.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.FlatButton13.Location = New System.Drawing.Point(438, 67)
-        Me.FlatButton13.Name = "FlatButton13"
-        Me.FlatButton13.Rounded = False
-        Me.FlatButton13.Size = New System.Drawing.Size(177, 32)
-        Me.FlatButton13.TabIndex = 3
-        Me.FlatButton13.Text = "Confirm Payment"
-        Me.FlatButton13.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
-        '
         'SalesForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -648,6 +665,7 @@ Partial Class SalesForm
         Me.ClientSize = New System.Drawing.Size(652, 887)
         Me.Controls.Add(Me.FormSkin1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "SalesForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "StationPlus - Sales"
@@ -723,4 +741,5 @@ Partial Class SalesForm
     Friend WithEvents Label10 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents FlatButton13 As FlatButton
+    Friend WithEvents FlatButton14 As FlatButton
 End Class
