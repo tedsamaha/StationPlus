@@ -30,7 +30,16 @@ Partial Class SalesForm
         Me.CLIENTSTableAdapter = New StationPlus.StationPlusDataSetTableAdapters.CLIENTSTableAdapter()
         Me.INVENTORYTableAdapter = New StationPlus.StationPlusDataSetTableAdapters.INVENTORYTableAdapter()
         Me.FormSkin1 = New StationPlus.FormSkin()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.FlatButton7 = New StationPlus.FlatButton()
+        Me.FlatButton9 = New StationPlus.FlatButton()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.FlatButton8 = New StationPlus.FlatButton()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.FlatButton6 = New StationPlus.FlatButton()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.FlatButton5 = New StationPlus.FlatButton()
@@ -46,9 +55,16 @@ Partial Class SalesForm
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.ITEM = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.QUANTITY = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FlatButton12 = New StationPlus.FlatButton()
+        Me.FlatButton11 = New StationPlus.FlatButton()
+        Me.FlatButton10 = New StationPlus.FlatButton()
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.ORDER_B_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ORDER_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ITEMID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ITEM_NAME = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QTY = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PRICE = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.FlatButton3 = New StationPlus.FlatButton()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -56,16 +72,19 @@ Partial Class SalesForm
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.FlatButton1 = New StationPlus.FlatButton()
         Me.FlatStatusBar1 = New StationPlus.FlatStatusBar()
+        Me.FlatButton13 = New StationPlus.FlatButton()
         CType(Me.INVENTORYBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StationPlusDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StationPlusDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CLIENTSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FormSkin1.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -102,6 +121,7 @@ Partial Class SalesForm
         Me.FormSkin1.BackColor = System.Drawing.Color.White
         Me.FormSkin1.BaseColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(73, Byte), Integer))
         Me.FormSkin1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(53, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.FormSkin1.Controls.Add(Me.Panel6)
         Me.FormSkin1.Controls.Add(Me.Panel5)
         Me.FormSkin1.Controls.Add(Me.FlatButton6)
         Me.FormSkin1.Controls.Add(Me.Panel4)
@@ -117,17 +137,128 @@ Partial Class SalesForm
         Me.FormSkin1.HeaderMaximize = False
         Me.FormSkin1.Location = New System.Drawing.Point(0, 0)
         Me.FormSkin1.Name = "FormSkin1"
-        Me.FormSkin1.Size = New System.Drawing.Size(652, 810)
+        Me.FormSkin1.Size = New System.Drawing.Size(652, 887)
         Me.FormSkin1.TabIndex = 0
         Me.FormSkin1.Text = "StationPlus - Sale"
+        '
+        'Panel6
+        '
+        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.Panel6.Controls.Add(Me.FlatButton7)
+        Me.Panel6.Controls.Add(Me.FlatButton9)
+        Me.Panel6.Controls.Add(Me.ComboBox2)
+        Me.Panel6.Controls.Add(Me.FlatButton8)
+        Me.Panel6.Controls.Add(Me.TextBox1)
+        Me.Panel6.Location = New System.Drawing.Point(12, 371)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(628, 100)
+        Me.Panel6.TabIndex = 29
+        '
+        'FlatButton7
+        '
+        Me.FlatButton7.BackColor = System.Drawing.Color.Transparent
+        Me.FlatButton7.BaseColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.FlatButton7.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FlatButton7.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.FlatButton7.Location = New System.Drawing.Point(438, 33)
+        Me.FlatButton7.Name = "FlatButton7"
+        Me.FlatButton7.Rounded = False
+        Me.FlatButton7.Size = New System.Drawing.Size(177, 37)
+        Me.FlatButton7.TabIndex = 23
+        Me.FlatButton7.Text = "Add Item"
+        Me.FlatButton7.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
+        '
+        'FlatButton9
+        '
+        Me.FlatButton9.BackColor = System.Drawing.Color.Transparent
+        Me.FlatButton9.BaseColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.FlatButton9.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FlatButton9.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FlatButton9.Location = New System.Drawing.Point(269, 34)
+        Me.FlatButton9.Name = "FlatButton9"
+        Me.FlatButton9.Rounded = False
+        Me.FlatButton9.Size = New System.Drawing.Size(40, 36)
+        Me.FlatButton9.TabIndex = 28
+        Me.FlatButton9.Text = "-"
+        Me.FlatButton9.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.DataSource = Me.INVENTORYBindingSource
+        Me.ComboBox2.DisplayMember = "ITEM_NAME"
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(12, 34)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(249, 36)
+        Me.ComboBox2.TabIndex = 21
+        Me.ComboBox2.ValueMember = "ITEM_ID"
+        '
+        'FlatButton8
+        '
+        Me.FlatButton8.BackColor = System.Drawing.Color.Transparent
+        Me.FlatButton8.BaseColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.FlatButton8.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FlatButton8.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FlatButton8.Location = New System.Drawing.Point(385, 34)
+        Me.FlatButton8.Name = "FlatButton8"
+        Me.FlatButton8.Rounded = False
+        Me.FlatButton8.Size = New System.Drawing.Size(40, 36)
+        Me.FlatButton8.TabIndex = 27
+        Me.FlatButton8.Text = "+"
+        Me.FlatButton8.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(315, 35)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(62, 34)
+        Me.TextBox1.TabIndex = 22
+        Me.TextBox1.Text = "1"
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Panel5.Location = New System.Drawing.Point(12, 642)
+        Me.Panel5.Controls.Add(Me.FlatButton13)
+        Me.Panel5.Controls.Add(Me.Label11)
+        Me.Panel5.Controls.Add(Me.Label10)
+        Me.Panel5.Controls.Add(Me.Label12)
+        Me.Panel5.Location = New System.Drawing.Point(12, 754)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(625, 100)
+        Me.Panel5.Size = New System.Drawing.Size(628, 104)
         Me.Panel5.TabIndex = 20
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI Semibold", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.White
+        Me.Label11.Location = New System.Drawing.Point(13, 61)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(85, 38)
+        Me.Label11.TabIndex = 1
+        Me.Label11.Text = "Total:"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(14, 12)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(89, 38)
+        Me.Label10.TabIndex = 0
+        Me.Label10.Text = "Total:"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.ForeColor = System.Drawing.Color.White
+        Me.Label12.Location = New System.Drawing.Point(6, 41)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(620, 28)
+        Me.Label12.TabIndex = 2
+        Me.Label12.Text = "----------------------------------------------------------------------------"
         '
         'FlatButton6
         '
@@ -135,7 +266,7 @@ Partial Class SalesForm
         Me.FlatButton6.BaseColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.FlatButton6.Cursor = System.Windows.Forms.Cursors.Hand
         Me.FlatButton6.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.FlatButton6.Location = New System.Drawing.Point(12, 604)
+        Me.FlatButton6.Location = New System.Drawing.Point(12, 716)
         Me.FlatButton6.Name = "FlatButton6"
         Me.FlatButton6.Rounded = False
         Me.FlatButton6.Size = New System.Drawing.Size(628, 32)
@@ -300,38 +431,110 @@ Partial Class SalesForm
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.DataGridView1)
-        Me.Panel2.Location = New System.Drawing.Point(12, 365)
+        Me.Panel2.Controls.Add(Me.FlatButton12)
+        Me.Panel2.Controls.Add(Me.FlatButton11)
+        Me.Panel2.Controls.Add(Me.FlatButton10)
+        Me.Panel2.Controls.Add(Me.DataGridView3)
+        Me.Panel2.Location = New System.Drawing.Point(12, 477)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(628, 233)
         Me.Panel2.TabIndex = 4
         '
-        'DataGridView1
+        'FlatButton12
         '
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ITEM, Me.QUANTITY})
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(628, 233)
-        Me.DataGridView1.TabIndex = 0
+        Me.FlatButton12.BackColor = System.Drawing.Color.Transparent
+        Me.FlatButton12.BaseColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.FlatButton12.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FlatButton12.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.FlatButton12.Location = New System.Drawing.Point(438, 159)
+        Me.FlatButton12.Name = "FlatButton12"
+        Me.FlatButton12.Rounded = False
+        Me.FlatButton12.Size = New System.Drawing.Size(177, 57)
+        Me.FlatButton12.TabIndex = 31
+        Me.FlatButton12.Text = "Cancel"
+        Me.FlatButton12.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
         '
-        'ITEM
+        'FlatButton11
         '
-        Me.ITEM.DataSource = Me.INVENTORYBindingSource
-        Me.ITEM.DisplayMember = "ITEM_NAME"
-        Me.ITEM.HeaderText = "ITEM"
-        Me.ITEM.Name = "ITEM"
-        Me.ITEM.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ITEM.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.ITEM.ValueMember = "ITEM_ID"
+        Me.FlatButton11.BackColor = System.Drawing.Color.Transparent
+        Me.FlatButton11.BaseColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.FlatButton11.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FlatButton11.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.FlatButton11.Location = New System.Drawing.Point(438, 86)
+        Me.FlatButton11.Name = "FlatButton11"
+        Me.FlatButton11.Rounded = False
+        Me.FlatButton11.Size = New System.Drawing.Size(177, 57)
+        Me.FlatButton11.TabIndex = 30
+        Me.FlatButton11.Text = "Clear List"
+        Me.FlatButton11.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
         '
-        'QUANTITY
+        'FlatButton10
         '
-        Me.QUANTITY.HeaderText = "QUANTITY"
-        Me.QUANTITY.Name = "QUANTITY"
+        Me.FlatButton10.BackColor = System.Drawing.Color.Transparent
+        Me.FlatButton10.BaseColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.FlatButton10.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FlatButton10.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.FlatButton10.Location = New System.Drawing.Point(438, 13)
+        Me.FlatButton10.Name = "FlatButton10"
+        Me.FlatButton10.Rounded = False
+        Me.FlatButton10.Size = New System.Drawing.Size(177, 57)
+        Me.FlatButton10.TabIndex = 29
+        Me.FlatButton10.Text = "Delete Item"
+        Me.FlatButton10.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
+        '
+        'DataGridView3
+        '
+        Me.DataGridView3.AllowUserToAddRows = False
+        Me.DataGridView3.AllowUserToDeleteRows = False
+        Me.DataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ORDER_B_ID, Me.ORDER_ID, Me.ITEMID, Me.ITEM_NAME, Me.QTY, Me.PRICE})
+        Me.DataGridView3.Location = New System.Drawing.Point(12, 8)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.ReadOnly = True
+        Me.DataGridView3.RowTemplate.Height = 24
+        Me.DataGridView3.Size = New System.Drawing.Size(413, 218)
+        Me.DataGridView3.TabIndex = 26
+        '
+        'ORDER_B_ID
+        '
+        Me.ORDER_B_ID.HeaderText = "ID"
+        Me.ORDER_B_ID.Name = "ORDER_B_ID"
+        Me.ORDER_B_ID.ReadOnly = True
+        Me.ORDER_B_ID.Visible = False
+        '
+        'ORDER_ID
+        '
+        Me.ORDER_ID.HeaderText = "ORDER ID"
+        Me.ORDER_ID.Name = "ORDER_ID"
+        Me.ORDER_ID.ReadOnly = True
+        Me.ORDER_ID.Visible = False
+        '
+        'ITEMID
+        '
+        Me.ITEMID.HeaderText = "ITEM"
+        Me.ITEMID.Name = "ITEMID"
+        Me.ITEMID.ReadOnly = True
+        Me.ITEMID.Visible = False
+        '
+        'ITEM_NAME
+        '
+        Me.ITEM_NAME.HeaderText = "ITEM NAME"
+        Me.ITEM_NAME.Name = "ITEM_NAME"
+        Me.ITEM_NAME.ReadOnly = True
+        '
+        'QTY
+        '
+        Me.QTY.HeaderText = "QUANTITY"
+        Me.QTY.Name = "QTY"
+        Me.QTY.ReadOnly = True
+        '
+        'PRICE
+        '
+        Me.PRICE.HeaderText = "PRICE"
+        Me.PRICE.Name = "PRICE"
+        Me.PRICE.ReadOnly = True
+        Me.PRICE.Visible = False
         '
         'Panel1
         '
@@ -401,7 +604,7 @@ Partial Class SalesForm
         Me.FlatButton1.BaseColor = System.Drawing.Color.Red
         Me.FlatButton1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.FlatButton1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.FlatButton1.Location = New System.Drawing.Point(623, 3)
+        Me.FlatButton1.Location = New System.Drawing.Point(614, 11)
         Me.FlatButton1.Name = "FlatButton1"
         Me.FlatButton1.Rounded = False
         Me.FlatButton1.Size = New System.Drawing.Size(26, 26)
@@ -415,7 +618,7 @@ Partial Class SalesForm
         Me.FlatStatusBar1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.FlatStatusBar1.Font = New System.Drawing.Font("Segoe UI", 8.0!)
         Me.FlatStatusBar1.ForeColor = System.Drawing.Color.White
-        Me.FlatStatusBar1.Location = New System.Drawing.Point(0, 787)
+        Me.FlatStatusBar1.Location = New System.Drawing.Point(0, 864)
         Me.FlatStatusBar1.Name = "FlatStatusBar1"
         Me.FlatStatusBar1.RectColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.FlatStatusBar1.ShowTimeDate = False
@@ -424,28 +627,46 @@ Partial Class SalesForm
         Me.FlatStatusBar1.Text = "FlatStatusBar1"
         Me.FlatStatusBar1.TextColor = System.Drawing.Color.White
         '
+        'FlatButton13
+        '
+        Me.FlatButton13.BackColor = System.Drawing.Color.Transparent
+        Me.FlatButton13.BaseColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.FlatButton13.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FlatButton13.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.FlatButton13.Location = New System.Drawing.Point(438, 67)
+        Me.FlatButton13.Name = "FlatButton13"
+        Me.FlatButton13.Rounded = False
+        Me.FlatButton13.Size = New System.Drawing.Size(177, 32)
+        Me.FlatButton13.TabIndex = 3
+        Me.FlatButton13.Text = "Confirm Payment"
+        Me.FlatButton13.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
+        '
         'SalesForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(652, 810)
+        Me.ClientSize = New System.Drawing.Size(652, 887)
         Me.Controls.Add(Me.FormSkin1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "SalesForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "d"
+        Me.Text = "StationPlus - Sales"
         Me.TransparencyKey = System.Drawing.Color.Fuchsia
         CType(Me.INVENTORYBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StationPlusDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StationPlusDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CLIENTSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.FormSkin1.ResumeLayout(False)
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
@@ -472,7 +693,6 @@ Partial Class SalesForm
     Friend WithEvents Label6 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents INVENTORYBindingSource As BindingSource
     Friend WithEvents INVENTORYTableAdapter As StationPlusDataSetTableAdapters.INVENTORYTableAdapter
     Friend WithEvents Label7 As Label
@@ -480,9 +700,27 @@ Partial Class SalesForm
     Friend WithEvents Panel4 As Panel
     Friend WithEvents FlatButton5 As FlatButton
     Friend WithEvents FlatButton4 As FlatButton
-    Friend WithEvents ITEM As DataGridViewComboBoxColumn
-    Friend WithEvents QUANTITY As DataGridViewTextBoxColumn
     Friend WithEvents FlatButton6 As FlatButton
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Label9 As Label
+    Friend WithEvents FlatButton7 As FlatButton
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents DataGridView3 As DataGridView
+    Friend WithEvents FlatButton8 As FlatButton
+    Friend WithEvents FlatButton9 As FlatButton
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents FlatButton11 As FlatButton
+    Friend WithEvents FlatButton10 As FlatButton
+    Friend WithEvents ORDER_B_ID As DataGridViewTextBoxColumn
+    Friend WithEvents ORDER_ID As DataGridViewTextBoxColumn
+    Friend WithEvents ITEMID As DataGridViewTextBoxColumn
+    Friend WithEvents ITEM_NAME As DataGridViewTextBoxColumn
+    Friend WithEvents QTY As DataGridViewTextBoxColumn
+    Friend WithEvents PRICE As DataGridViewTextBoxColumn
+    Friend WithEvents FlatButton12 As FlatButton
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents FlatButton13 As FlatButton
 End Class

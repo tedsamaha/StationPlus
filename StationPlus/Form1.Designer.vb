@@ -136,7 +136,7 @@ Partial Class Form1
         Me.FlatButton1.Name = "FlatButton1"
         Me.FlatButton1.Rounded = False
         Me.FlatButton1.Size = New System.Drawing.Size(181, 50)
-        Me.FlatButton1.TabIndex = 10
+        Me.FlatButton1.TabIndex = 9
         Me.FlatButton1.Text = "LOG IN"
         Me.FlatButton1.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
         '
